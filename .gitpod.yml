@@ -5,4 +5,3 @@
 tasks:
   - init: ./init.sh
 
-
