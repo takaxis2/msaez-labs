@@ -1,8 +1,8 @@
-# MSA School Labs
+# SJCU Cloud Labs
 
 
 ## GitPod 접속
-https://gitpod.io/#https://github.com/msa-school/msaez-labs
+https://gitpod.io/#https://github.com/sjcu-cloud/msaez-labs
 
 - 접속 후 "Terminal > Terminal열기"
 
