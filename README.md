@@ -4,7 +4,7 @@
 
 
 ## How to connect to GitPod Cloud Lab
-https://gitpod.io/#https://github.com/sjcu-cloud/msaez-labs
+https://gitpod.io/#https://github.com/acmexii/msaez-labs
 
 - 접속 시, Gitpod 워크 스페이스가 생성되고 좀 더 기다리면 Cloud IDE 환경이 오픈
 - 접속 후, Project IDE인 VSCode 메뉴에서 "Terminal > Terminal열기"
