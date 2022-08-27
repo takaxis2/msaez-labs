@@ -10,7 +10,7 @@
 
 
 ## Prerequisites for using Cloud Lab - Two
-- 본 학기클라우드서비스(Microservices) Lab을 내 GitHub 계정으로 으로 복사
+- 클라우드서비스(Microservices) Lab을 내 GitHub 계정으로 복사
   - 먼저, Chrome 브라우저를 실행하고 Github에 로그인한다.
   - https://github.com/acmexii/msaez-labs에 접속 후, 해당 리소스를 Fork하여 나의 Git계정으로 복사한다.
   ![image](https://user-images.githubusercontent.com/35618409/187013760-0fe22873-71f2-42d8-b4b0-13ac3597939f.png)
