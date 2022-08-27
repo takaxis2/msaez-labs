@@ -16,7 +16,7 @@
 - 클라우드서비스(Microservices) Lab을 내 GitHub 계정으로 복사
   - 먼저, Chrome 브라우저를 실행하고 Github에 로그인한다.
   - https://github.com/acmexii/msaez-labs에 접속 후, 해당 리소스를 Fork하여 나의 Git계정으로 복사한다.
-  ![image](https://user-images.githubusercontent.com/35618409/187021791-8c8923f4-2bf6-442c-b4a0-76c2888d6c35.png)
+![image](https://user-images.githubusercontent.com/35618409/187021900-f0285913-5fab-4ab0-9fe9-a9a4d75a2618.png)
   - Fork가 완료되면 Github URL이 내 계정의 리소스로 페이지가 전환된다.
 
 ### Step #3.
