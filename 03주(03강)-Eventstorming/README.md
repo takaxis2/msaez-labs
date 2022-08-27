@@ -14,3 +14,8 @@
 - Eventstorming 을 위한 스티커 팔렛트와 캔버스 영역이 나타난다.
 ![image](https://user-images.githubusercontent.com/35618409/187014714-41960934-921e-4a90-880b-420bc7e0018a.png)
 
+
+## EventStorming References
+- https://www.eventstorming.com/
+- https://en.wikipedia.org/wiki/Event_storming
+- http://www.msaschool.io/operation/design/design-three/
