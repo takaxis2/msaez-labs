@@ -7,7 +7,7 @@ MSAEz 이벤트스토밍 툴을 이용하여 DDD의 구체적설계에 해당하
 - 또한, 서브 도메인(마이크로서비스)간 통신에 필요한 커뮤니케이션(Interface) 프로토콜을 상호 조율하는 과정이 포함된다.
 - 기본적인 테크니컬 설계요소까지 가미된 EventStorming 모델은 Implementation 단계시 Business Logic 등을 구체화하여 구현 완료된다.
 
-## 내 Process-Level EventStorming 이 없는 경우,
+## Process-Level EventStorming 모델이 없는 경우,
 - 크롬브라우저로 아래 사이트에 접속한다.
 - https://labs.msaez.io/#/storming/C7pO0ZuWtXXxIKenocD9EMPYrxw2/5e635760de5900b532e373f8d6db25b9 
 - 출력된 Process-Level 모델을 'FORK'하여 내 브라우저로 복제하고 이를 활용하자.
