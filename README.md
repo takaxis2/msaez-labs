@@ -3,31 +3,33 @@
 - github 레포지토리 url앞에 gitpod.io/# 를 붙이면 바로 gitpod idle로 들어갈 수 있다.
 
 ## Prerequisites for using Cloud Lab
-- 본 학기 클라우드서비스(Microservces) Lab 사전 준비사항
+- 본 학기 클라우드서비스(Microservices) Lab을 위한 사전 준비사항
   - 학습을 수강하는 Local 머신에 Chrome 브라우저가 설치되어 있어야 한다.
-  - Gihub 가입 : https://github.com 도메인에 회원가입(sign-up)후, 반드시 입력한 메일주소에서 확인까지 수행
+  - Gihub 가입 : https://github.com 도메인에 회원가입(sign-up) 후, 반드시 입력한 메일주소에서 확인까지 수행
 
 
 ## How to connect to GitPod Cloud Lab
-- 클라우드서비스(Microservces) Github에 접속: https://github.com/acmexii/msaez-labs
-  - 로딩 후, 도메인 URL 앞에 https://gitpod.io/# 을 추가 후, 접속
+- 클라우드서비스(Microservices) Github에 접속: https://github.com/acmexii/msaez-labs
+  - Github 페이지가 로딩되고 나면, 도메인 URL 앞에 https://gitpod.io/# 을 추가 후, 새창에서 재접속해 본다.
   - https://gitpod.io/#https://github.com/acmexii/msaez-labs
 
 
-## When The First Connection.
+## When The First Connection
 - Gitpod 인증화면이 나타나며 Gihub 계정정보를 입력한다.
+![image](https://user-images.githubusercontent.com/35618409/187013335-cee187a1-cd43-4752-b881-424af1a9f2f9.png)
 - Gitpod 로고가 중앙에 나타나며 접속이 진행된다.
+![image](https://user-images.githubusercontent.com/35618409/187013354-7dcdec01-66df-4e88-b3a7-faca490fea27.png)
 - 성공적으로 접속이 이루어지면 VSCode 통합 IDE가 나타난다.
 ![image](https://user-images.githubusercontent.com/35618409/187012423-53229178-9221-492f-bf75-b493e99782be.png)
-- 왼쪽(Explorer) 영역에는 Cloud Lab Gihub 리소스 목록이, 오른쪽에는 편집기와 터미널이 위치한다.
+- 왼쪽(Explorer) 영역에는 Cloud Lab Gihub 리소스 목록이, 오른쪽에는 편집기와 터미널이 위치해 있다.
 
 
-## After completing Gitpod Loading.
+## After completing Gitpod Loading
 - 본학기에 사용할 12st-mall 마이크로서비스는 Spring-boot 언어를 사용한다.
-- VSCode에서 Java 언어와 연관된 Extention Pack(Plugin)을 설치한다.  
+- VSCode에 Java 언어와 연관된 Extention Pack(Plugin)을 설치한다.  
   - 왼쪽(Explorer) 영역에서 mall 폴더를 선택 후, Ctrl + p를 누른다.
   - 팝업 창에서 Order.java를 검색하여 선택하면 편집기상에 열리는데, 이때 VSCode가 추천하는 Plugin을 설치한다.
-  - 조금 뒤, 편집기에 로딩된 Order.java 리소스에 확장팩이 설정된다. (일부 코드의 컬러가 바뀜)
+  - 조금 뒤, 편집기에 로딩된 Order.java 리소스에 설치한 확장팩이 적용된다. (일부 코드의 컬러가 바뀜)
 ![image](https://user-images.githubusercontent.com/35618409/187012911-455568d1-e20f-4d30-9ac6-03e32fd1de08.png)
 
 
