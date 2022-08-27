@@ -61,12 +61,12 @@ mvn spring-boot:run
 
 ### Order Microservice에 Command 전송
 ```
-http GET http://localhost:8080
-http GET http://localhost:8080/orders
-http POST http://localhost:8080/orders customerId=1000 customerName=gdhong productId=1000 qty=10 address=seoul
-http GET http://localhost:8080/orders
-http DELETE http://localhost:8080/orders/1
-http GET http://localhost:8080/orders
+http GET http://localhost:8081
+http GET http://localhost:8081/orders
+http POST http://localhost:8081/orders customerId=1000 productId=1000 productName=TV qty=10 
+http GET http://localhost:8081/orders
+http DELETE http://localhost:8081/orders/1
+http GET http://localhost:8081/orders
 ```
 
 ### Command로 인해 Publish된 Domain Events 확인

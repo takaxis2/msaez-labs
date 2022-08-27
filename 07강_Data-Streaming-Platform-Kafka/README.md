@@ -59,21 +59,21 @@ cd /bin
 
 - 새로운 터미널에서 Order 서비스 시작
 ```bash
-cd 08강_Data-Streaming-Platform-Kafka
+cd 07강_Data-Streaming-Platform-Kafka
 cd order
 mvn spring-boot:run
 ```
 
 - 새로운 터미널에서 Product1 서비스 시작
 ```bash
-cd 08강_Data-Streaming-Platform-Kafka
+cd 07강_Data-Streaming-Platform-Kafka
 cd product1
 mvn spring-boot:run
 ```
 
 - 새로운 터미널에서 Product2 서비스 시작
 ```bash
-cd 08강_Data-Streaming-Platform-Kafka
+cd 07강_Data-Streaming-Platform-Kafka
 cd product2
 mvn spring-boot:run
 ```
