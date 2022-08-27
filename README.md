@@ -2,16 +2,25 @@
 - GitPod란, Git기반 형상서버인 Github, 또는 Gitlab상에서 VSCode(Visual Studio Code) 통합 IDE 도구를 제공해 주는 무료 Web서비스
 - github 레포지토리 url앞에 gitpod.io/# 를 붙이면 바로 gitpod idle로 들어갈 수 있다.
 
-## Prerequisites for using Cloud Lab
-- 본 학기 클라우드서비스(Microservices) Lab을 위한 사전 준비사항
+
+## Prerequisites for using Cloud Lab - One
+- 본 클라우드서비스(Microservices) 학기동안 사용할 내 Local Machine 에
   - 학습을 수강하는 Local 머신에 Chrome 브라우저가 설치되어 있어야 한다.
   - Gihub 가입 : https://github.com 도메인에 회원가입(sign-up) 후, 반드시 입력한 메일주소에서 확인까지 수행
 
 
+## Prerequisites for using Cloud Lab - Two
+- 본 학기클라우드서비스(Microservices) Lab을 내 GitHub 계정으로 으로 복사
+  - 먼저, Chrome 브라우저를 실행하고 Github에 로그인한다.
+  - https://github.com/acmexii/msaez-labs에 접속 후, 해당 리소스를 Fork하여 나의 Git계정으로 복사한다.
+  ![image](https://user-images.githubusercontent.com/35618409/187013760-0fe22873-71f2-42d8-b4b0-13ac3597939f.png)
+  - Fork가 완료되면 Github URL이 내 계정의 리소스로 페이지가 전환된다.
+
+
 ## How to connect to GitPod Cloud Lab
-- 클라우드서비스(Microservices) Github에 접속: https://github.com/acmexii/msaez-labs
+- 클라우드서비스(Microservices) Github에 접속: https://github.com/MY-GIT-ACCOUNT/msaez-labs
   - Github 페이지가 로딩되고 나면, 도메인 URL 앞에 https://gitpod.io/# 을 추가 후, 새창에서 재접속해 본다.
-  - https://gitpod.io/#https://github.com/acmexii/msaez-labs
+  - https://gitpod.io/#https://github.com/MY-GIT-ACCOUNT/msaez-labs
 
 
 ## When The First Connection
@@ -33,7 +42,6 @@
 
 
 ## Built-in Utilities & How to add Tools 
-
 - 개발환경은 2022년 기준 ubuntu 20.04.3 LTS이며 go, java, python, node 등 기본 프레임워크는 설치되어 있다.
 - 추가 설치가 필요한 Software는 Gitpod 접속과 동시에 실행되는 .gitpod.yml에 기술하여 설치 가능하다.
 - 아래 4개의 목록은 .gitpod.yml에 정의되어 설치되도록 설정되어 있다. (init.sh)
@@ -66,8 +74,8 @@ sudo mv /tmp/eksctl /usr/local/bin
 ```
 
 ## Install Kafka for EDA-based Microservices Communication (if, necessary)
-### Docker Compose 이용 (도커 있을 때 강추)
 
+### Docker Compose 이용 (Docker Runtime이 설치되어 있을때 강추)
 - Kafka 의 실행 (Docker Compose)
 ```
 cd kafka
@@ -84,11 +92,11 @@ kafka-kafka-1  | [2022-04-21 22:07:03,262] INFO [KafkaServer id=1] started (kafk
 docker-compose exec -it kafka /bin/bash   # kafka docker container 내부 shell 로 진입
 
 [appuser@e23fbf89f899 bin]$ cd /bin
-[appuser@e23fbf89f899 bin]$ ./kafka-console-consumer --bootstrap-server localhost:9092 --topic petstore
+[appuser@e23fbf89f899 bin]$ ./kafka-console-consumer --bootstrap-server localhost:9092 --topic mall
 ```
 
 
-### 로컬 설치 (비추)
+### 로컬 설치 (Docker Runtime이 설치되어 있지 않을 때, 비추)
 - Kafka Download
 ```
 wget https://dlcdn.apache.org/kafka/3.1.0/kafka_2.13-3.1.0.tgz
@@ -105,11 +113,10 @@ bin/kafka-server-start.sh config/server.properties &
 - Kafka Event 컨슈밍하기 (별도 터미널)
 ```
 cd kafka_2.13-3.1.0/
-bin/kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic petstore
+bin/kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic mall
 ```
 
 ## 자주 사용하는 명령어
-
 ```
 netstat -lntp | grep :80 #포트확인
 kill -9 `netstat -lntp|grep 808|awk '{ print $7 }'|grep -o '[0-9]*'`   # 80번대 마이크로서비스 모두 삭제
@@ -119,7 +126,7 @@ kill -9 `netstat -lntp|grep 808|awk '{ print $7 }'|grep -o '[0-9]*'`   # 80번�
 
 ## Docker 배포 관련
 
-각 프로젝트 내에는 Dockerfile이 포함되어 있다. 이것을 빌드하기 위해서는 우선 maven 빌드로 jar 를 만들어준 후, jar를 Dockerfile 로 다시 빌드해준다.
+- 각 프로젝트 내에는 Dockerfile이 포함되어 있다. 이것을 빌드하기 위해서는 우선 maven 빌드로 jar 를 만들어준 후, jar를 Dockerfile 로 다시 빌드해준다.
 
 ```
 cd order
@@ -131,7 +138,6 @@ docker run order:v1
 ## Istall Kafka on Kubernetes Cluster (if, necessary)
 
 ### Helm 
-
 Helm(패키지 인스톨러) 설치
 - Helm 3.x 설치(권장)
 ```bash
