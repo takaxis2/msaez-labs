@@ -18,7 +18,6 @@
 - Gitpod 인증화면이 나타나며 Gihub 계정정보를 입력한다.
 ![image](https://user-images.githubusercontent.com/35618409/187013335-cee187a1-cd43-4752-b881-424af1a9f2f9.png)
 - Gitpod 로고가 중앙에 나타나며 접속이 진행된다.
-![image](https://user-images.githubusercontent.com/35618409/187013354-7dcdec01-66df-4e88-b3a7-faca490fea27.png)
 - 성공적으로 접속이 이루어지면 VSCode 통합 IDE가 나타난다.
 ![image](https://user-images.githubusercontent.com/35618409/187012423-53229178-9221-492f-bf75-b493e99782be.png)
 - 왼쪽(Explorer) 영역에는 Cloud Lab Gihub 리소스 목록이, 오른쪽에는 편집기와 터미널이 위치해 있다.
