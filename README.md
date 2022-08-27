@@ -1,16 +1,37 @@
-# SJCU Cloud Labs
-- GitPod란, Git기반 형상서버인 Github 또는 Gitlab에서 VSCode(Visual Studio Code)기반 통합 IDE 도구를 제공해 주는 무료 Web서비스
+# SJCU Cloud Lab
+- GitPod란, Git기반 형상서버인 Github, 또는 Gitlab상에서 VSCode(Visual Studio Code) 통합 IDE 도구를 제공해 주는 무료 Web서비스
 - github 레포지토리 url앞에 gitpod.io/# 를 붙이면 바로 gitpod idle로 들어갈 수 있다.
+
+## Prerequisites for using Cloud Lab
+- 본 학기 클라우드서비스(Microservces) Lab 사전 준비사항
+  - 학습을 수강하는 Local 머신에 Chrome 브라우저가 설치되어 있어야 한다.
+  - Gihub 가입 : https://github.com 도메인에 회원가입(sign-up)후, 반드시 입력한 메일주소에서 확인까지 수행
 
 
 ## How to connect to GitPod Cloud Lab
-https://gitpod.io/#https://github.com/acmexii/msaez-labs
+- 클라우드서비스(Microservces) Github에 접속: https://github.com/acmexii/msaez-labs
+  - 로딩 후, 도메인 URL 앞에 https://gitpod.io/# 을 추가 후, 접속
+  - https://gitpod.io/#https://github.com/acmexii/msaez-labs
 
-- 접속 시, Gitpod 워크 스페이스가 생성되고 좀 더 기다리면 Cloud IDE 환경이 오픈
-- 접속 후, Project IDE인 VSCode 메뉴에서 "Terminal > Terminal열기"
+
+## When The First Connection.
+- Gitpod 인증화면이 나타나며 Gihub 계정정보를 입력한다.
+- Gitpod 로고가 중앙에 나타나며 접속이 진행된다.
+- 성공적으로 접속이 이루어지면 VSCode 통합 IDE가 나타난다.
+![image](https://user-images.githubusercontent.com/35618409/187012423-53229178-9221-492f-bf75-b493e99782be.png)
+- 왼쪽(Explorer) 영역에는 Cloud Lab Gihub 리소스 목록이, 오른쪽에는 편집기와 터미널이 위치한다.
 
 
-## Built-in Utilities
+## After completing Gitpod Loading.
+- 본학기에 사용할 12st-mall 마이크로서비스는 Spring-boot 언어를 사용한다.
+- VSCode에서 Java 언어와 연관된 Extention Pack(Plugin)을 설치한다.  
+  - 왼쪽(Explorer) 영역에서 mall 폴더를 선택 후, Ctrl + p를 누른다.
+  - 팝업 창에서 Order.java를 검색하여 선택하면 편집기상에 열리는데, 이때 VSCode가 추천하는 Plugin을 설치한다.
+  - 조금 뒤, 편집기에 로딩된 Order.java 리소스에 확장팩이 설정된다. (일부 코드의 컬러가 바뀜)
+![image](https://user-images.githubusercontent.com/35618409/187012911-455568d1-e20f-4d30-9ac6-03e32fd1de08.png)
+
+
+## Built-in Utilities & How to add Tools 
 
 - 개발환경은 2022년 기준 ubuntu 20.04.3 LTS이며 go, java, python, node 등 기본 프레임워크는 설치되어 있다.
 - 추가 설치가 필요한 Software는 Gitpod 접속과 동시에 실행되는 .gitpod.yml에 기술하여 설치 가능하다.
