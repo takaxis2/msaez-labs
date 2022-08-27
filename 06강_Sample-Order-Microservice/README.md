@@ -6,8 +6,10 @@
 
 
 ## Configure Web-based Rumtime Environments
-- GitPod란, Git기반 형상서버인 Github, 또는 Gitlab상에서 VSCode(Visual Studio Code) 통합 IDE 도구를 제공해 주는 무료 Web서비스
-- github 레포지토리 url앞에 gitpod.io/# 를 붙이면 바로 gitpod idle로 들어갈 수 있다.
+- 본 학기 클라우드서비스의 활용 Lab은 MSAEz(https://labs.msaez.io)와 GitPod 환경에서 진행된다.
+- MSAEz는 마이크로서비스의 분석/설계 방법론인 EventStorming을 온라인 환경에서 완벽 제공해 주는 혁신적인 도구이다. 
+- GitPod란, Git기반 형상서버인 Github, 또는 Gitlab상에서 VSCode(Visual Studio Code) 통합 IDE 도구를 제공해 주는 무료  플랫폼이다.
+- GitPod는 Github 레포지토리 url앞에 gitpod.io/# 를 붙이면 손쉽게 Gitpod IDE로 들어갈 수 있다.
 
 ### Step #1.
 - Gihub 가입 : https://github.com 도메인에 회원가입(sign-up) 후, 반드시 입력한 메일주소에서 확인까지 수행
@@ -30,15 +32,15 @@
 - Gitpod 로고가 중앙에 나타나며 접속이 진행된다.
 - 성공적으로 접속이 이루어지면 VSCode 통합 IDE가 나타난다.
 ![image](https://user-images.githubusercontent.com/35618409/187012423-53229178-9221-492f-bf75-b493e99782be.png)
-- 왼쪽(Explorer) 영역에는 Cloud Lab Gihub 리소스 목록이, 오른쪽에는 편집기와 터미널이 위치해 있다.
+- 왼쪽(Explorer) 영역에는 Github에 있는 Cloud Lab 리소스 목록이, 오른쪽에는 편집기와 터미널이 위치해 있다.
 
 ## Step #5.
-- 본 학기에 사용할 12st-mall 마이크로서비스는 Spring-boot 언어를 사용한다.
+- 본 학기에 사용할 12st-mall 마이크로서비스는 Java언어인 Spring-boot를 사용한다.
 - VSCode에 Java 언어와 연관된 Extention Pack(Plugin)을 설치한다.  
-  - 왼쪽(Explorer) 영역에서 06강 폴더를 선택 후, Ctrl + p를 누른다.
-  - 팝업 창에서 Order.java를 검색하여 조회된 결과 중, 06강 하위 리소스를 선택하면 오른쪽 편집기상에 열리는데, 이때 VSCode가 추천하는 Plugin을 설치한다.
+  - Ctrl + p를 눌러 File Search창을 띄운 다음, Order.java를 검색한다.
+  - 검색된 Java File을 클릭하면 이때 VSCode가 추천(오른쪽 하단에 작은 팝업)하는 'Java Extension Pack' Plugin을 Install한다.
   - 조금 뒤, 편집기에 로딩된 Order.java 리소스에 설치한 확장팩이 적용된다. (일부 코드의 컬러가 바뀜)
-![image](https://user-images.githubusercontent.com/35618409/187012911-455568d1-e20f-4d30-9ac6-03e32fd1de08.png)
+![image](https://user-images.githubusercontent.com/35618409/187050733-23d19286-74cb-4473-af7f-296a9902c251.png)
 
 
 
