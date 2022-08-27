@@ -1,4 +1,4 @@
-# SJCU Cloud Labs
+# SJCU Cloud Labs - 123
 
 - GitPod란, Git기반 형상서버인 Github 또는 Gitlab에서 VSCode(Visual Studio Code)기반 통합 IDE 도구를 제공해 주는 무료 Web서비스
 - github 레포지토리 url앞에 gitpod.io/# 를 붙이면 바로 gitpod idle로 들어갈 수 있다.
