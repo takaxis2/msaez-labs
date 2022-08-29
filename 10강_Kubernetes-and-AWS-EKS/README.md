@@ -78,7 +78,7 @@ Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버
 
 
 ### 네트워킹 지정
->> VPC 서브넷 설정을 기본으로 둔다.
+- VPC 서브넷 설정을 기본으로 둔다.
 - 아래에서 '다음' 클릭한다.
 
 
@@ -117,7 +117,7 @@ aws eks --region us-east-1 update-kubeconfig --name MY-CLUSTER-NAME
 - Updated context arn:aws:eks:us-east-1:~~cluster/gdhong ~~~/.kube/config
 - 메시지가 나타난다.
 
->> 설정확인
+### 설정확인
 - 아래 커맨드 입력시, 아래 응답이 조회되면 테스트가 성공한 것이다.
 ```
 kubectl get all 
