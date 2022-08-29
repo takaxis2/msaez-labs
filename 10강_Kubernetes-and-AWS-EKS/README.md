@@ -93,32 +93,35 @@ Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버
 
 ## Configure Kubernetes Client and Connect to EKS 
 
-★ [6/6] 쿠버네티스 클라이언트를 설치 및 클러스터 접속 ---------------------------------
-	> Academy Lab상에 AWS 쿠버네티스 스텍인 eksctl과 kubectl 을 설치한다.
+### 쿠버네티스 클라이언트 설치 및 클러스터 접속 
 
-	> eksctl 설치 - 아래 순으로 AWS 클러스터 컨트롤러를 Lab에 설치한다.
-		>> curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
-		>> mkdir -p $HOME/bin && cp /tmp/eksctl $HOME/bin && export PATH=$PATH:$HOME/bin
-		>> echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
+#### kubectl 설치 
+- 아래 순으로 쿠버네티스 클라이언트를 Lab에 설치한다.
+```
+curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
+echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
+```
 
+#### kubernetes Cluster 접속 및 테스트
+- 단계에서 aws 클라이언트가 접속한 리전(ex. us-east-1)을 재확인한다.
+- 내가 생성한 클러스터 이름을 입력한다.
+- Lab에 설치된 aws 클라언트를 사용하여 쿠버네티스 클러스터와 클라이언트를 연결한다.
 
-	> kubectl 설치 - 아래 순으로 쿠버네티스 클라이언트를 Lab에 설치한다.
-		>> curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/kubectl
-		>> chmod +x ./kubectl
-		>> mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
-		>> echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
+```
+aws eks --region us-east-1 update-kubeconfig --name MY-CLUSTER-NAME
+```
 
+- 연결이 정상적으로 설정되면,
+- Updated context arn:aws:eks:us-east-1:~~cluster/gdhong ~~~/.kube/config
+- 메시지가 나타난다.
 
-	> kubernetes Cluster 접속 및 테스트
-		>> [1/6] 단계에서 aws 클라이언트가 접속한 리전을 재확인한다.
-		>> [2/6] 단계에서 생성한 클러스터 이름을 입력한다.
-		>> Lab에 설치된 aws 클라언트를 사용하여 쿠버네티스 서버와 클라이언트를 SSO한다.
+>> 설정확인
+- 아래 커맨드 입력시, 아래 응답이 조회되면 테스트가 성공한 것이다.
+```
+kubectl get all 
+```
+- service/kubernetes   ClusterIP   10.100.0.1   <none>        443/TCP   58m
 
-		>> aws eks --region us-east-1 update-kubeconfig --name gdhong-eks
-			- 정상완료되면,
-			- Updated context arn:aws:eks:us-east-1:~~cluster/gdhong ~~~/.kube/config
-			- 메시지가 나타난다.
-
-		>> 설정확인
-			- kubectl get all 입력시, 아래 내용이 조회되면 테스트가 성공한 것이다.
-			- service/kubernetes   ClusterIP   10.100.0.1   <none>        443/TCP   58m
+	
