@@ -52,39 +52,46 @@ Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버
 - 설정 확인 후, '생성'을 눌러 클러스터를 생성한다.
 
 
-## Creating Cluster Work Node
+## Creating Cluster Worker Node
 
 - 5~10분 정도 경과 후, Kubernetes 클러스터 생성이 완료된다. 
   - 클러스터 메뉴에 생성된 Cluster(ex. lily-eks)가 확인된다.
 
- 
 ### Adding WorkNode Group to my Cluster
 - 내 클러스터를 클릭해 'Compute(컴퓨팅)' 탭에서 노드그룹을 추가한다.
 - 'Compute(컴퓨팅)' 탭의 '노드그룹추가' 를 클릭한다.
+![image](https://user-images.githubusercontent.com/35618409/187133568-9e46bc9f-4357-45e0-b8a4-d5dda8cdf3e1.png)
 
 ### 노드 그룹 구성
-- 그룹명에는 gdhong-eks-NodeGroup 을 입력한다.
-- 템플릿 : 클러스터명-NodeGroup
->> 노드 IAM은 LabRole을 선택한다.
->> Kubernetes 레이블에서 레이블 추가를 눌러서, 
-- 키 에는 'worker', 값 에는 'gdhong-NodeGroup'을 입력한다. (필수)
+- 이름에 노드 그룹명(ex. lily-eks-NodeGroup)을 입력한다.
+- 노드 IAM 역할은 LabRole을 선택한다.
 
-> 컴퓨팅 및 조정 구성 설정
->> 쿠버네티스 클러스터를 구성하는 워크노드(VM, EC2) 관련 설정이다.
->> 모든 값을 default로 둔다.
+### Kubernetes 레이블
+- Kubernetes 레이블에서 '레이블 추가'를 눌러 
+- 키 에는 'worker', 값 에는 노드 그룹명(ex. lily-eks-NodeGroup)을 입력한다. (필수)
+- 아래에서 '다음' 클릭한다.
 
-> 네트워킹 지정
+### 컴퓨팅 및 조정 구성 설정
+- 쿠버네티스 클러스터를 구성하는 워크노드(VM, EC2) 관련 설정이다.
+- 모든 값을 default로 둔다.
+- 아래에서 '다음' 클릭한다.
+
+
+### 네트워킹 지정
 >> VPC 서브넷 설정을 기본으로 둔다.
-
-> 검토 및 생성
->> 설정 확인 후, 최종 생성을 위해 	'생성'을 클릭한다.
+- 아래에서 '다음' 클릭한다.
 
 
-★ [5/6] 5~10분 후 Kubernetes 클러스터의 워크노드 생성이 완료된다. ----------
-	> 클러스터 메뉴에 생성된 gdhong-eks 목록이 확인된다.
-	> gdhong-eks를 클릭해 'Compute(컴퓨팅)' 탭의 생성된 워크노드을 확인한다. 
+### 검토 및 생성
+- Worker Node 추가에 필요한 모든 설정 확인 후, '생성'을 클릭한다.
 
 
+### Check my Kubernetes Cluster & Woker Nodes
+- 클러스터 메뉴에 생성된 내 클러스터가 조회된다.
+- 내 클러스터를 클릭해 'Compute(컴퓨팅)' 탭을 눌러 생성된 워크노드을 확인한다. 
+
+
+## Configure Kubernetes Client and Connect to EKS 
 
 ★ [6/6] 쿠버네티스 클라이언트를 설치 및 클러스터 접속 ---------------------------------
 	> Academy Lab상에 AWS 쿠버네티스 스텍인 eksctl과 kubectl 을 설치한다.
