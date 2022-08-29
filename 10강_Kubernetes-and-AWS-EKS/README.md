@@ -98,7 +98,7 @@ Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버
 #### kubectl 설치 
 - 아래 순으로 쿠버네티스 클라이언트를 Lab에 설치한다.
 ```
-curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/kubectl
+curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.22.6/2022-03-09/bin/linux/amd64/kubectl
 chmod +x ./kubectl
 mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
 echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
