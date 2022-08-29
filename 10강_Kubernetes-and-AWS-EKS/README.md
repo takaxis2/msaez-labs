@@ -1,4 +1,4 @@
-# Kubernetes(AWS EKS) Provisioning
+# Kubernetes(EKS) Provisioning on AWS
 
 Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버네티스 클라이언트와 연동하는 내용이다. 
 
@@ -17,7 +17,7 @@ Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버
 - '클러스터 추가' > '생성'를 클릭한다.
 
 
-## Setting Kubernetes Cluster Information
+## Creating Kubernetes Cluster 
 
 ### 클러스터 구성
 - 클러스터 이름을 영문으로 입력한다.
@@ -33,47 +33,51 @@ Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버
 
 - 보안그룹 설명에서 새보안 그룹을 생성(Ctrl + 'VPC콘솔' 클릭) 한다.
 ![image](https://user-images.githubusercontent.com/35618409/187119829-afbd28a7-11e8-4faa-a246-30cb20d328d2.png)
-
-- 오픈된 창에서 보안그룹 생성을 클릭한다.
+- 오픈된 창에서 '보안그룹 생성'을 클릭한다.
 - 보안그룹 이름에 나만의 SecurityGroup명을 입력한다. (예시, gdhong-securitygroup)
+- 필수정보인 '보안그룹 설명' 필드에도 동일하게 보안그룹 이름을 입력한다.
 - 인바운드 규칙에서 '규칙 추가'를 클릭한다.
 - 유형에서 '모든 트래픽', 소스 유형은 'Anywhere-IPv4'를 선택한다.
 - 보안그룹 생성을 클릭해 정상적으로 생성되면 창을 닫는다.
->> 보안그룹 Reload를 눌러 방금 생성한 보안그룹을 지정한다.
->> 나머지 설정을 Default로 두고 '다음'을 클릭한다.
+![image](https://user-images.githubusercontent.com/35618409/187125888-f2a627a9-90b3-4306-8421-414e04612c13.png)
+
+- 보안그룹 선택 필드 우측의 Reload를 눌러 방금 생성한 보안그룹을 지정한다.
+![image](https://user-images.githubusercontent.com/35618409/187126059-9db5a09a-fe34-44af-a6c5-f2da83dc0112.png)
+- 나머지 설정을 Default로 두고 '다음'을 클릭한다.
 
 ### 로깅 구성
->> 모두 비활성화 상태에서 '다음'을 클릭한다.
+- 모두 비활성화 상태에서 '다음'을 클릭한다.
 
 ### 검토 및 생성
->> 설정 확인 후, 최종 생성을 위해	'생성'을 클릭한다.
+- 설정 확인 후, '생성'을 눌러 클러스터를 생성한다.
 
 
-★ [3/6] 5~10분 후 Kubernetes 클러스터 생성이 완료된다. ----------
-	> 클러스터 메뉴에 생성된 gdhong-eks 목록이 확인된다.
-	> gdhong-eks를 클릭해 'Compute(컴퓨팅)' 탭을 눌러 노드그룹을 추가한다. 
+## Creating Cluster Work Node
 
+- 5~10분 정도 경과 후, Kubernetes 클러스터 생성이 완료된다. 
+  - 클러스터 메뉴에 생성된 Cluster(ex. lily-eks)가 확인된다.
 
+ 
+### Adding WorkNode Group to my Cluster
+- 내 클러스터를 클릭해 'Compute(컴퓨팅)' 탭에서 노드그룹을 추가한다.
+- 'Compute(컴퓨팅)' 탭의 '노드그룹추가' 를 클릭한다.
 
-★ [4/6] 클러스터에 노드 그룹 추가 ------------------------------	
-	> 'Compute(컴퓨팅)' 탭의 '노드그룹추가' 를 클릭한다.
+### 노드 그룹 구성
+- 그룹명에는 gdhong-eks-NodeGroup 을 입력한다.
+- 템플릿 : 클러스터명-NodeGroup
+>> 노드 IAM은 LabRole을 선택한다.
+>> Kubernetes 레이블에서 레이블 추가를 눌러서, 
+- 키 에는 'worker', 값 에는 'gdhong-NodeGroup'을 입력한다. (필수)
 
-	> 노드 그룹 구성
-		>> 그룹명에는 gdhong-eks-NodeGroup 을 입력한다.
-			- 템플릿 : 클러스터명-NodeGroup
-		>> 노드 IAM은 LabRole을 선택한다.
-		>> Kubernetes 레이블에서 레이블 추가를 눌러서, 
-			- 키 에는 'worker', 값 에는 'gdhong-NodeGroup'을 입력한다. (필수)
+> 컴퓨팅 및 조정 구성 설정
+>> 쿠버네티스 클러스터를 구성하는 워크노드(VM, EC2) 관련 설정이다.
+>> 모든 값을 default로 둔다.
 
-	> 컴퓨팅 및 조정 구성 설정
-		>> 쿠버네티스 클러스터를 구성하는 워크노드(VM, EC2) 관련 설정이다.
-		>> 모든 값을 default로 둔다.
+> 네트워킹 지정
+>> VPC 서브넷 설정을 기본으로 둔다.
 
-	> 네트워킹 지정
-		>> VPC 서브넷 설정을 기본으로 둔다.
-
-	> 검토 및 생성
-		>> 설정 확인 후, 최종 생성을 위해 	'생성'을 클릭한다.
+> 검토 및 생성
+>> 설정 확인 후, 최종 생성을 위해 	'생성'을 클릭한다.
 
 
 ★ [5/6] 5~10분 후 Kubernetes 클러스터의 워크노드 생성이 완료된다. ----------
