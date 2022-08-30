@@ -93,7 +93,23 @@ Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버
 
 ## Configure Kubernetes Client Environments on Gitpod  
 
-### 쿠버네티스 클라이언트 설치 및 클러스터 접속 
+생성된 AWS Kubernetes Cluster를 위한 Client 환경은 GitPod 상에서 연결 설정하여 사용한다.
+(Learnet Lab에서도 가능하지만, UI가 상대적으로 편리한 GitPod를 활용)
+
+
+### Copy AWS Credentials 
+- Learnet Lab에서 AWS Credential을 복사하여 GitPod에 붙여넣는다.
+- Learnet Lab 메뉴 중, AWS Details를 클릭하고, 출력된 내용에서 AWS CLI 'Show'를 클릭한다.
+- Region 코드가 us-east-1 로 조회된다.
+![image](https://user-images.githubusercontent.com/35618409/187328088-7295b12a-c1de-498f-a3d0-2a2c312f8b9e.png)
+
+- AWS CLI 네모영역 안에 보여지는 모든 정보를 복사한다. 
+- 복사된 내용을 내 GitHub의 GitPod 환경으로 접속한 다음, 아래 명령을 실행하여 붙여넣기한다.
+```
+cd ~/.aws
+vi credentials
+```
+- 붙여넣기가 완료되면 저장 종료(:wq)한다.
 
 #### kubectl 설치 
 - 아래 순으로 쿠버네티스 클라이언트를 Lab에 설치한다.
