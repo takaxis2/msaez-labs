@@ -1,4 +1,4 @@
-# Deploy 12st-Mall on AWS EKS(Elastic Kubernetes Service)
+# Deploy 12st-Mall on AWS EKS
 
 - 12st-Mall 쇼핑몰을 생성한 쿠버네티스 상에 배포하고, EDA기반 비동기 통신방식으로 상호 동작하는지를 확인한다.
 - 마이크로서비스 배포에 앞서, 먼저 카프카 메시징 인프라를 Kubernetes Cluster에 설치한다.
