@@ -32,8 +32,8 @@ kubectl get all
 
 ### Install Kafka with Helm
 ```
-helm repo update
 helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
 kubectl create ns kafka
 helm install my-kafka bitnami/kafka --namespace kafka
 ```
