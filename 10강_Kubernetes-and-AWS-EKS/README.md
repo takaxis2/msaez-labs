@@ -91,50 +91,51 @@ Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버
 - 내 클러스터를 클릭해 'Compute(컴퓨팅)' 탭을 눌러 생성된 워크노드을 확인한다. 
 
 
-## Configure Kubernetes Client Environments on Gitpod  
+## Configure Kubernetes Access from Gitpod  
 
 생성된 AWS Kubernetes Cluster를 위한 Client 환경은 GitPod 상에서 연결 설정하여 사용한다.
 (Learnet Lab에서도 가능하지만, UI가 상대적으로 편리한 GitPod를 활용)
 
 
-### Copy AWS Credentials 
-- Learnet Lab에서 AWS Credential을 복사하여 GitPod에 붙여넣는다.
-- Learnet Lab 메뉴 중, AWS Details를 클릭하고, 출력된 내용에서 AWS CLI 'Show'를 클릭한다.
-- Region 코드가 us-east-1 로 조회된다.
+### Copy AWS Credentials to GitPod
+- Learner Lab에서 AWS Credential을 복사하여 GitPod에 붙여넣는다.
+- Learner Lab 메뉴 중, AWS Details를 클릭하고, 출력된 내용에서 AWS CLI 'Show'를 클릭한다.
+- Region 코드가 us-east-1 로 조회된다. (다른 Value일 수도 있음)
+- AWS CLI 네모영역 안에 보여지는 모든 정보를 복사하여 Text Editor에 붙여넣기 해 둔다. 
 ![image](https://user-images.githubusercontent.com/35618409/187328088-7295b12a-c1de-498f-a3d0-2a2c312f8b9e.png)
 
-- AWS CLI 네모영역 안에 보여지는 모든 정보를 복사한다. 
-- 복사된 내용을 내 GitHub의 GitPod 환경으로 접속한 다음, 아래 명령을 실행하여 붙여넣기한다.
+- 나의 Cloud Lab Gitpod 환경에 접속한다.
+- 아래 Command를 실행한다.
+- 나타나는 각 항목의 Value에 Text Editor에 있는, 또는 Learner Lab에서 조회된 정보를 입력한다.
+```
+aws configure
+AWS Access Key ID [None]: Text Editor에 있는 aws_access_key_id의 Value 
+AWS Secret Access Key [None]: Text Editor에 있는 aws_secret_access_key의 Value 
+Default region name [None]: Learner Lab에서 Region 코드
+Default output format [None]: json
+```
+
+- 생성된 Credential 정보를 열어 aws_session_token을 추가한다.
 ```
 cd ~/.aws
 vi credentials
 ```
+- Text Editor에 있는 aws_session_token 정보를 복사하여 추가한다. (또는 전체를 복사해 Overwrite 해도 됨)
 - 붙여넣기가 완료되면 저장 종료(:wq)한다.
 
-#### kubectl 설치 
-- 아래 순으로 쿠버네티스 클라이언트를 Lab에 설치한다.
-```
-curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.22.6/2022-03-09/bin/linux/amd64/kubectl
-chmod +x ./kubectl
-mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
-echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
-```
+#### kubernetes Cluster Connect & Testing
 
-#### kubernetes Cluster 접속 및 테스트
-- 단계에서 aws 클라이언트가 접속한 리전(ex. us-east-1)을 재확인한다.
-- 내가 생성한 클러스터 이름을 입력한다.
-- Lab에 설치된 aws 클라언트를 사용하여 쿠버네티스 클러스터와 클라이언트를 연결한다.
-
+- 설정된 aws 클라언트를 사용하여 Kubernetes Cluster와 클라이언트(kubectl)를 연결한다.
+- 아래 REGION_CODE와 MY-CLUSTER-NAME으로 수정하여 명령문을 실행한다.
 ```
-aws eks --region us-east-1 update-kubeconfig --name MY-CLUSTER-NAME
+aws eks --region REGION_CODE update-kubeconfig --name MY-CLUSTER-NAME
 ```
 
 - 연결이 정상적으로 설정되면,
 - Updated context arn:aws:eks:us-east-1:~~cluster/gdhong ~~~/.kube/config
 - 메시지가 나타난다.
 
-### 설정확인
-- 아래 커맨드 입력시, 아래 응답이 조회되면 테스트가 성공한 것이다.
+- 아래 커맨드 입력시, 응답이 조회되면 테스트가 성공한 것이다.
 ```
 kubectl get all 
 ```
