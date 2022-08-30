@@ -117,7 +117,7 @@ http GET http://GATEWAY-EXTERNAL-IP:8080/inventories
 
 ### Domain Events monitoring via Kafka Client
 ```
-kubectl run my-kafka-client --restart='Never' --image docker.io/bitnami/kafka:2.8.0-debian-10-r0 --namespace kafka --command -- sleep infinity
+kubectl run my-kafka-client --restart='Never' --image docker.io/bitnami/kafka:2.8.0-debian-10-r0 --namespace kafka --command --sleep infinity
 kubectl exec --tty -i my-kafka-client --namespace kafka -- bash
 kafka-console-consumer.sh --bootstrap-server my-kafka.kafka.svc.cluster.local:9092 --topic mall --from-beginning
 ```
