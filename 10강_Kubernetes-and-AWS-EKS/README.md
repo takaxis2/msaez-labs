@@ -91,7 +91,7 @@ Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버
 - 내 클러스터를 클릭해 'Compute(컴퓨팅)' 탭을 눌러 생성된 워크노드을 확인한다. 
 
 
-## Configure Kubernetes Client and Connect to EKS 
+## Configure Kubernetes Client Environments on Gitpod  
 
 ### 쿠버네티스 클라이언트 설치 및 클러스터 접속 
 
