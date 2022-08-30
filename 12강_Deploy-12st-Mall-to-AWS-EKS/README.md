@@ -97,8 +97,8 @@ kubectl apply -f service.yaml -n mall
 상품마이크로서비스를 실행하면 초기 상품(No. 1000)의 재고가 100개로 등록된다.
 게이트웨이 마이크로서비스의 End point를 추출하고, 모든 요청은 게이트웨이를 경유해 각 서비스로 유입되도록 한다.
 
-### Acquire Gateway End Point
-- Kubectl 커맨드로 게이트웨이 서비스의 EXTERNAL-IP를 복사한다.
+### Acquire Gateway Endpoint
+- Kubectl 커맨드로 게이트웨이 서비스의 EXTERNAL-IP를 복사한다. (서비스포트는 8080 임)
 ```
 kubectl get service -n mall
 ```
