@@ -95,9 +95,16 @@ kubectl apply -f service.yaml -n mall
 ## Testing 12st-Mall 
 
 상품마이크로서비스를 실행하면 초기 상품(No. 1000)의 재고가 100개로 등록된다.
+게이트웨이 마이크로서비스의 End point를 추출하고, 모든 요청은 게이트웨이를 경유해 각 서비스로 유입되도록 한다.
 
+### Acquire Gateway End Point
+- Kubectl 커맨드로 게이트웨이 서비스의 EXTERNAL-IP를 복사한다.
+```
+kubectl get service -n mall
+```
 
-### Request REST Call (Order, Cancel Order)
+### Request REST Calls (Order, Cancel Order)
+
 - 주문생성
 ```
 http POST http://GATEWAY-EXTERNAL-IP:8080/orders productId=1000 productName=TV qty=5 customerId=5
@@ -116,8 +123,10 @@ http GET http://GATEWAY-EXTERNAL-IP:8080/inventories
 ```
 
 ### Domain Events monitoring via Kafka Client
+
+- 카프카 클라이언트를 실행하여 각 서비스에서 Publish된 도메인 이벤트 확인
 ```
-kubectl run my-kafka-client --restart='Never' --image docker.io/bitnami/kafka:2.8.0-debian-10-r0 --namespace kafka --command --sleep infinity
+kubectl run my-kafka-client --restart='Never' --image docker.io/bitnami/kafka:2.8.0-debian-10-r0 --namespace kafka --command -- sleep infinity
 kubectl exec --tty -i my-kafka-client --namespace kafka -- bash
 kafka-console-consumer.sh --bootstrap-server my-kafka.kafka.svc.cluster.local:9092 --topic mall --from-beginning
 ```
