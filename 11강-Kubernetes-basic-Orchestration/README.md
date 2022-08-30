@@ -122,7 +122,3 @@ spec:
 - kubectl apply -f order.yaml 
 - kubectl get all 
 ```
-
-
-### 상세설명
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/r8oRinKA01o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
