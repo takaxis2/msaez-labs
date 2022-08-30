@@ -52,4 +52,73 @@ mvn package -B -DskipTests
 docker build -t Docker-ID/order:v1 .
 docker push Docker-ID/order:v1
 ```
-- docker denied 오류가 발생하면 “docker login” 명령으로 Token을 생성하여 docker에 Credential을 주입해 준다.
+- docker denied 오류가 발생하면 “docker login” 명령으로 Token을 생성하여 docker에 Credential을 주입하고 다시 Push한다.
+
+- kubernetes 하위 폴더로 이동하여 deployment.yml 파일의 배포 Spec. 중 19라인을 내 이미지 정보로 수정하고 저장한다.
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order
+  labels:
+    app: order
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: order
+  template:
+    metadata:
+      labels:
+        app: order
+    spec:
+      containers:
+        - name: order
+          image: username/order:latest    # Replace this value with my Docker Image Name.
+          ports:
+            - containerPort: 8080
+```
+
+- 12st-Mall 을 위한 네임스페이스를 생성하고 주문서비스를 배포한다.
+```
+kubectl create namespace mall
+kubectl apply -f deployment.yml -n mall
+kubectl apply -f service.yaml -n mall
+```
+
+### Deploy Delivery, Product Microservice 
+
+- 주문서비스와 동일한 방식으로 나머지 서비스를 배포한다.
+- 네임스페이스 mall은 추가적으로 생성하지 않아도 된다.
+
+
+## Testing 12st-Mall 
+
+상품마이크로서비스를 실행하면 초기 상품(No. 1000)의 재고가 100개로 등록된다.
+
+
+### Request REST Call (Order, Cancel Order)
+- 주문생성
+```
+http POST http://GATEWAY-EXTERNAL-IP:8080/orders productId=1000 productName=TV qty=5 customerId=5
+```
+- 상품재고 확인
+```
+http GET http://GATEWAY-EXTERNAL-IP:8080/inventories
+```
+- 주문취소
+```
+http DELETE http://GATEWAY-EXTERNAL-IP:8080/orders/1
+```
+- 상품재고 확인
+```
+http GET http://GATEWAY-EXTERNAL-IP:8080/inventories
+```
+
+### Domain Events monitoring via Kafka Client
+```
+kubectl run my-kafka-client --restart='Never' --image docker.io/bitnami/kafka:2.8.0-debian-10-r0 --namespace kafka --command -- sleep infinity
+kubectl exec --tty -i my-kafka-client --namespace kafka -- bash
+kafka-console-consumer.sh --bootstrap-server my-kafka.kafka.svc.cluster.local:9092 --topic mall --from-beginning
+```
+
