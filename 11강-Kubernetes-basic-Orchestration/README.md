@@ -1,19 +1,20 @@
 # Kubernetes basic Orchestration 
 
- AWS 상에 만들어진 Kubernetes 서버에서 기본적인 쿠버네티스 오퍼레이션을 통해 쿠버네티스를 이해한다. 
+ AWS 상에 만들어진 Kubernetes 서버에서 쿠버네티스 오퍼레이션을 통해 쿠버네티스를 이해한다. 
  
 - GitPod 환경에서 쿠버네티스 오퍼레이션을 수행하기 위해서는 GitPod에 있는 Client와 Kubernetes Server간 연결이 필요하다.
 - 연결하는 방법은 10강_Kubernetes-and-AWS-EKS의 README.md 중 "Configure Kubernetes Access from Gitpod"을 참조한다.
 
 
-### Container Orchestration 무작정 따라하기 
+## Container Orchestration 무작정 따라하기 
 
-#### 배송서비스 생성하기 
+배송 마이크로서비스를 대상으로 쿠버네티스에 배포하고, 오케스트레이션을 수행한다.
+
+### 배송서비스 생성하기 
 
 - 배송 서비스 배포 및 확인하기
-
 ```
-kubectl apply -f https://raw.githubusercontent.com/acmexii/demo/master/edu/delivery-rediness-v1.yaml
+kubectl create deploy delivery --image=ghcr.io/acmexii/delivery-rediness:v1
 ```
 
 ```
@@ -31,56 +32,99 @@ Trouble Shooting #1 : kubectl exec -it [Pod 객체] -- /bin/sh
 [참고사이트](http://www.msaschool.io/operation/checkpoint/check-point-one/)
 
 
-#### 배송서비스 삭제해 보기 
+### 배송서비스 삭제해 보기 
 
 ```
 kubectl get pod
-kubectl delete pod [order Pod 객체] 
+kubectl delete pod [Delivery Pod 객체] 
 kubectl get pod
 ```
 
-- Pod를 삭제해도 새로운 Pod로 서비스가 재생성됨을 확인
+- Pod를 삭제해도 새로운 Pod로 서비스가 재생성됨을 확인 (Self-Healing)
 
 
-#### 클라우드 외부에서도 접근 가능하도록 노출하기
+### 클라우드 외부에서도 접근 가능하도록 노출하기
 
 ```
 kubectl expose deploy delivery --type=LoadBalancer --port=8080
 kubectl get service -w
 ```
-
 - Service 정보의 External IP가 Pending 상태에서 IP정보로 변경시까지 대기하기
-- 엔드포인트를 통해 서비스 확인 - http://(IP정보):8080/orders
+- 엔드포인트를 통해 서비스 확인 - http://(EXTERNAL IP정보):8080/deliveries
 - Ctrl + C를 눌러 모니터링 모드 종료하기 
 
 
-#### 배송서비스 업데이트(v2) 하기
+### 배송서비스 업데이트(v2) 하기
 
 ```
 kubectl get deploy -o wide
-kubectl apply -f https://raw.githubusercontent.com/acmexii/demo/master/edu/delivery-no-rediness-v2.yaml
+kubectl set image deploy delivery delivery=ghcr.io/acmexii/delivery-rediness:v2
 kubectl get deploy -o wide
 ```
 
-- 배송서비스에 적용된 Image가 apexacme/order에서 apexacme/order:v2로 업데이트 되었음을 확인
+- 배송서비스에 적용된 Image가 ghcr.io/acmexii/delivery-rediness:v1에서 ghcr.io/acmexii/delivery-rediness:v2로 업데이트 되었음을 확인
 
 
-#### 주문서비스 롤백(RollBack) 하기
+### 배송서비스 롤백(RollBack) 하기
 
 ```
-kubectl rollout undo deploy order
+kubectl rollout undo deploy delivery
 kubectl get deploy -o wide
 ```
 
-- 주문서비스에 적용된 Image가 apexacme/order로 롤백되었음을 확인
+- 배송서비스에 적용된 Image가 다시 ghcr.io/acmexii/delivery-rediness:v1로 롤백되었음을 확인
 
 
-#### 주문서비스 인스턴스 확장(Scale-Out) 하기 (수동)
+### 배송서비스 인스턴스 확장(Scale-Out) 하기 (수동)
 
 ```
-kubectl scale deploy order --replicas=3
+kubectl scale deploy delivery --replicas=3
 kubectl get pod
 ```
 
-- 주문서비스의 인스턴스(Pod)가 3개로 확장됨을 확인
+- 배송서비스의 인스턴스(Pod)가 3개로 확장됨을 확인
+
+### Declarative 한 배포방식인 YAML을 통해 배송서비스 배포하기
+
+- 아래 YAML Spec.을 복사하여 delivery-deploy.yaml 파일로 작성한다.
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: delivery
+  labels:
+    app: delivery
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: delivery
+  template:
+    metadata:
+      labels:
+        app: delivery
+    spec:
+      containers:
+        - name: delivery
+          image: ghcr.io/acmexii/delivery-rediness:v3
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 15
+            timeoutSeconds: 2
+            successThreshold: 1
+            periodSeconds: 5
+            failureThreshold: 3
+```
+
+- 작성된 YAML파일로 배송서비스 v3를 배포하고 확인한다.
+```
+kubectl get deploy -o wide
+kubectl apply -f delivery-deploy.yaml
+kubectl get deploy -o wide
+```
+
 
