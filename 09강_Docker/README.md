@@ -45,7 +45,7 @@ docker image ls
 ```
 
 
-### 이미지 빌드 & Remote Registry(Hub.docker.com)에 푸시하기
+### 이미지 빌드 & 이미지 저장소(Hub.docker.com)에 푸시하기
 
 도커 이미지를 생성하려면, 소스코드와 이미지 빌드에 필요한 스크립트(Dockerfile)가 필요하다.
 
