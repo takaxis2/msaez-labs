@@ -42,6 +42,7 @@ cd /bin
 - VSCode의 새로운 터미널을 오픈한다.
 - Kafka 서버에 접속후 Consumer 실행하여 퍼블리시된 이벤트 모니터링 
 ```
+cd kafka
 docker-compose exec -it kafka /bin/bash   # kafka docker container 내부 shell 로 진입
 cd /bin
 ./kafka-console-consumer --bootstrap-server http://localhost:9092 --topic topic_example --from-beginning
