@@ -1,6 +1,9 @@
 # EDA based 12st-Mall Testing
 주문, 배송, 상품 및 게이트웨이 마이크로서비스를 로컬에서 실행하고 Kafka Messaging Platform을 경유해 시나리오에 맞는 EDA 통신이 진행되는 것을 확인한다.
 
+- Gitpod based 랩환경 사전설정 필수
+[(Gitpod-based Lab Environments 참고링크)](https://github.com/acmexii/msaez-labs/tree/main/06%EA%B0%95_Sample-Order-Microservice#configure-web-based-rumtime-environments)
+
 ## Kafka Server Start
 - 새로운 터미널을 오픈한다.
 - Docker Compose로 Kafka 서버를 실행한다.
@@ -71,14 +74,14 @@ http GET http://localhost:8083/inventories
 
 ### 게이트웨이 마이크로서비스 기동
 
--  새로운 터미널을 오픈해 아래 Scripts로 게이트웨이서비스를 8088 포트로 기동한다.
+- 새로운 터미널을 오픈해 아래 Scripts로 게이트웨이서비스를 8088 포트로 기동한다.
 ```bash
 cd 08강-EDA_based_12st-Mall_Testing
 cd gateway
 mvn spring-boot:run
 ```
 
--게이트웨이를 경유하는 주문 요청을 Order Microservice에 전송한다.
+- 게이트웨이를 경유하는 주문 요청을 Order Microservice에 전송한다.
 ```
 http POST http://localhost:8088/orders customerId=1000 productId=1000 productName=TV qty=10 
 http GET http://localhost:8088/orders
