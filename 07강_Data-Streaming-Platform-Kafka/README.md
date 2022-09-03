@@ -2,6 +2,7 @@
 - Apache Kafka는 실시간으로 기록 스트림을 게시, 구독, 저장 및 처리할 수 있는 분산 데이터 스트리밍 플랫폼 
 - 최근 EDA기반 마이크로서비스 통신에 필수 Stack인 Kafka에 대해 학습한다.
 
+- Web based Lab 환경 사전설정 필수, ([Web-based Lab Environments 참고] https://github.com/acmexii/msaez-labs/tree/main/06%EA%B0%95_Sample-Order-Microservice#configure-web-based-rumtime-environments
 
 ## Preparation for Kafka Lab
 - Docker Compose로 Kafka 서버를 실행한다.
