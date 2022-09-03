@@ -2,8 +2,9 @@
 
 Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버네티스 클라이언트와 연동하는 내용이다. 
 
-- AWS Learner Lab 로그인 필수 (아래 참조)
-- Gitpod based 랩환경 사전설정 필수
+- 사전 환경
+  > AWS Learner Lab 로그인 필수 (아래 참조)
+  > Gitpod based 랩환경 사전설정 필수
 [(Gitpod-based Lab Environments 참고링크)](https://github.com/acmexii/msaez-labs/tree/main/06%EA%B0%95_Sample-Order-Microservice#configure-web-based-rumtime-environments)
 
 ## Connect to AWS Learner Lab & Ignition
