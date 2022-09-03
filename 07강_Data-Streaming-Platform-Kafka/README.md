@@ -97,7 +97,7 @@ mvn spring-boot:run
 - Kafka Partition을 확장한다. 
 
 ```sh 
-./kafka-topics --zookeeper localhost:2181 --alter --topic topic_example -partitions 2
+./kafka-topics --alter --bootstrap-server http://localhost:9092 --topic topic_example -partitions 2
 ```
 
 - Product2 마이크로서비스를 재시작하거나 2~3분 정도 기다리면 Partition Rebalancing이 일어나면서 Product2 서비스도 partition assigned로 로깅되면서 message를 Polling할 수 있는 상태로 변경된다.
