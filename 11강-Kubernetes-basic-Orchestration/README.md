@@ -3,7 +3,12 @@
  AWS 상에 만들어진 Kubernetes 서버에서 쿠버네티스 오퍼레이션을 통해 쿠버네티스를 이해한다. 
  
 - GitPod 환경에서 쿠버네티스 오퍼레이션을 수행하기 위해서는 GitPod에 있는 Client와 Kubernetes Server간 연결이 필요하다.
-- 연결하는 방법은 10강_Kubernetes-and-AWS-EKS의 README.md 중 "Configure Kubernetes Access from Gitpod"을 참조한다.
+
+- Gitpod based 랩환경 사전설정 필수
+[(Gitpod-based Lab Environments 참고링크)](https://github.com/acmexii/msaez-labs/tree/main/06%EA%B0%95_Sample-Order-Microservice#configure-web-based-rumtime-environments)
+
+- Gitpod에서 Kubectl과 Kubernetes Cluster 연결 필수
+[(Set Kubectl target Context 참고링크)](https://github.com/acmexii/msaez-labs/tree/main/10%EA%B0%95_Kubernetes-and-AWS-EKS#configure-kubernetes-access-from-gitpod)
 
 
 ## Container Orchestration 무작정 따라하기 
