@@ -3,11 +3,11 @@
 AWS 상에 배포된 12st-Mall을 활용하여 "자동 인스턴스 확장(Auto Scaling)"과 "무정지 배포(Zero downtime Deploy)"를 GitPod환경에서 실습한다. 
  
 - 사전 환경
-  - AWS에 Kubernetes Cluster가 실행되고 있어야 한다.
-  - Gitpod based 랩환경 사전설정 필수
+>> AWS에 Kubernetes Cluster가 실행되고 있어야 한다.
+>> Gitpod based 랩환경 사전설정 필수
 [(Gitpod-based Lab Environments 참고링크)](https://github.com/acmexii/msaez-labs/tree/main/06%EA%B0%95_Sample-Order-Microservice#configure-web-based-rumtime-environments)
 
-  - Gitpod에서 Kubectl과 Kubernetes Cluster 연결 필수
+>> Gitpod에서 Kubectl과 Kubernetes Cluster 연결 필수
 [(Set Kubectl target Context 참고링크)](https://github.com/acmexii/msaez-labs/tree/main/10%EA%B0%95_Kubernetes-and-AWS-EKS#configure-kubernetes-access-from-gitpod)
 
 
