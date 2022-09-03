@@ -4,6 +4,9 @@ Docker는 Runtime상에서 Host OS의 Kernel을 공유해 많은 수의 컨테�
 마이크로서비스는 Docker Image로 빌드되고, Image가 실행된 형상을 Container라고 한다.
 마이크로서비스가 컨테이너로 실행되었을 때, 해당 컨테이너가 제공하는 서비스에 접속가능하다.
 
+- Gitpod based 랩환경 사전설정 필수
+[(Gitpod-based Lab Environments 참고링크)](https://github.com/acmexii/msaez-labs/tree/main/06%EA%B0%95_Sample-Order-Microservice#configure-web-based-rumtime-environments)
+
 ## Docker Lab 무작정 따라하기   
 
 - Docker Lab을 위해서는 도커허브 계정이 필요하다. 
