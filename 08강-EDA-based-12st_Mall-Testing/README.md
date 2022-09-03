@@ -20,7 +20,7 @@ kafka-kafka-1  | [2022-04-21 22:07:03,262] INFO [KafkaServer id=1] started (kafk
 ```
 docker-compose exec -it kafka /bin/bash   # kafka docker container 내부 shell 로 진입
 cd /bin
-./kafka-console-consumer.sh --bootstrap-server http://localhost:9092 --topic mall --from-beginning
+./kafka-console-consumer --bootstrap-server http://localhost:9092 --topic mall --from-beginning
 ```
 
 ## 12-st Mall Microservice Start
