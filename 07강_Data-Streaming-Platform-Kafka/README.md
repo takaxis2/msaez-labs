@@ -21,18 +21,18 @@ kafka-kafka-1  | [2022-04-21 22:07:03,262] INFO [KafkaServer id=1] started (kafk
 ```
 docker-compose exec -it kafka /bin/bash   # kafka docker container 내부 shell 로 진입
 cd /bin
-./kafka-topics.sh --bootstrap-server http://localhost:9092 --topic topic_example --create --partitions 1 --replication-factor 1
+./kafka-topics --bootstrap-server http://localhost:9092 --topic topic_example --create --partitions 1 --replication-factor 1
 ```
 
 - 토픽 목록 조회
 ```
-./kafka-topics.sh --bootstrap-server http://localhost:9092 --list 
+./kafka-topics --bootstrap-server http://localhost:9092 --list 
 ```
 
 ## Topic Message handling
 - Producer를 실행하여 토픽에 이벤트 메시지 발행하기 
 ```
-./kafka-console-producer.sh --broker-list http://localhost:9092 --topic topic_example
+./kafka-console-producer --broker-list http://localhost:9092 --topic topic_example
 
 ```
 
@@ -41,7 +41,7 @@ cd /bin
 ```
 docker-compose exec -it kafka /bin/bash   # kafka docker container 내부 shell 로 진입
 cd /bin
-./kafka-console-consumer.sh --bootstrap-server http://localhost:9092 --topic topic_example --from-beginning
+./kafka-console-consumer --bootstrap-server http://localhost:9092 --topic topic_example --from-beginning
 ```
 
 - Producer 창에 Message를 입력하면, Consumer 창에서 Message가 조회된다.
@@ -84,8 +84,8 @@ mvn spring-boot:run
 ### Kafka API를 통한 마이크로서비스 매칭 파티션 
 - Kafka 서버의 터미널에서 토픽정보와 Consumer 그룹정보를 확인한다.
 ```
-./kafka-topics.sh --bootstrap-server localhost:9092 --topic topic_example --describe
-./kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group product
+./kafka-topics --bootstrap-server localhost:9092 --topic topic_example --describe
+./kafka-consumer-groups --bootstrap-server localhost:9092 --describe --group product
 ```
 
 
@@ -93,13 +93,13 @@ mvn spring-boot:run
 - Kafka Partition을 확장한다. 
 
 ```sh 
-./kafka-topics.sh --zookeeper localhost:2181 --alter --topic topic_example -partitions 2
+./kafka-topics --zookeeper localhost:2181 --alter --topic topic_example -partitions 2
 ```
 
 - Product2 마이크로서비스를 재시작하거나 2~3분 정도 기다리면 Partition Rebalancing이 일어나면서 Product2 서비스도 partition assigned로 로깅되면서 message를 Polling할 수 있는 상태로 변경된다.
 ```
-./kafka-topics.sh --bootstrap-server localhost:9092 --topic topic_example --describe
-./kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group product
+./kafka-topics --bootstrap-server localhost:9092 --topic topic_example --describe
+./kafka-consumer-groups --bootstrap-server localhost:9092 --describe --group product
 ```
 
 > Partition 0,1 각각에 Product 마이크로서비스가 매핑된 것을 확인할 수 있다.
