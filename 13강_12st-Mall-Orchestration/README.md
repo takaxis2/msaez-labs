@@ -4,6 +4,7 @@ AWS 상에 배포된 12st-Mall을 활용하여 "자동 인스턴스 확장(Auto 
  
 - 사전 환경
 > AWS에 Kubernetes Cluster가 실행되고 있어야 한다.
+
 > Gitpod based 랩환경 사전설정 필수
 [(Gitpod-based Lab Environments 참고링크)](https://github.com/acmexii/msaez-labs/tree/main/06%EA%B0%95_Sample-Order-Microservice#configure-web-based-rumtime-environments)
 
