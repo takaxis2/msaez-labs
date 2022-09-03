@@ -4,13 +4,13 @@
 - 마이크로서비스 배포에 앞서, 먼저 카프카 메시징 인프라를 Kubernetes Cluster에 설치한다.
 
 - 사전 환경
-  - AWS에 Kubernetes Cluster가 실행되고 있어야 한다.
-  - Gitpod based 랩환경 사전설정 필수
+  > AWS에 Kubernetes Cluster가 실행되고 있어야 한다.
+
+  > Gitpod based 랩환경 사전설정 필수
 [(Gitpod-based Lab Environments 참고링크)](https://github.com/acmexii/msaez-labs/tree/main/06%EA%B0%95_Sample-Order-Microservice#configure-web-based-rumtime-environments)
 
-  - Gitpod에서 Kubectl과 Kubernetes Cluster 연결 필수
+  > Gitpod에서 Kubectl과 Kubernetes Cluster 연결 필수
 [(Set Kubectl target Context 참고링크)](https://github.com/acmexii/msaez-labs/tree/main/10%EA%B0%95_Kubernetes-and-AWS-EKS#configure-kubernetes-access-from-gitpod)
-
 
 ## Install Distributed Messaging Platform - Kafka
 
