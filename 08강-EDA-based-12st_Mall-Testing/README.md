@@ -1,7 +1,8 @@
 # EDA based 12st-Mall Testing
 주문, 배송, 상품 및 게이트웨이 마이크로서비스를 로컬에서 실행하고 Kafka Messaging Platform을 경유해 시나리오에 맞는 EDA 통신이 진행되는 것을 확인한다.
 
-- Gitpod based 랩환경 사전설정 필수
+- 사전 환경
+  > Gitpod based 랩환경 사전설정 필수
 [(Gitpod-based Lab Environments 참고링크)](https://github.com/acmexii/msaez-labs/tree/main/06%EA%B0%95_Sample-Order-Microservice#configure-web-based-rumtime-environments)
 
 ## Kafka Server Start
