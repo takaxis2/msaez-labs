@@ -80,10 +80,10 @@ cd product2
 mvn spring-boot:run
 ```
 
-### 로그를 통한 마이크로서비스 매칭 파티션 
+### 로그를 통한 마이크로서비스 매칭 파티션 확인
 - Product1 서비스와는 달리 Product2 마이크로서비스의 Console 창을 통해 파티션 할당이 일어나지 않았음을 확인할 수 있다.
 
-### Kafka API를 통한 마이크로서비스 매칭 파티션 
+### Kafka API를 통한 마이크로서비스 매칭 파티션 확인 
 - Kafka 서버의 터미널에서 토픽정보와 Consumer 그룹정보를 확인한다.
 ```
 ./kafka-topics --bootstrap-server localhost:9092 --topic topic_example --describe
