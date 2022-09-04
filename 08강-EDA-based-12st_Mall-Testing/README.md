@@ -27,7 +27,7 @@ cd /bin
 ./kafka-console-consumer --bootstrap-server http://localhost:9092 --topic mall --from-beginning
 ```
 
-## 12-st Mall Microservice Start
+## 12st-Mall Microservice Start
 
 ### 주문 마이크로서비스 기동
 - 새로운 터미널을 오픈해 아래 Scripts로 주문서비스를 8081 포트로 기동한다.
