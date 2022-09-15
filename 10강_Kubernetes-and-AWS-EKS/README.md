@@ -9,7 +9,7 @@ Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버
 [(Gitpod-based Lab Environments 참고링크)](https://github.com/acmexii/msaez-labs/tree/main/06%EA%B0%95_Sample-Order-Microservice#configure-web-based-rumtime-environments)
 
 ## Connect to AWS Learner Lab & Ignition
-- AWS Academy Lab(https://awsacademy.instructure.com/)에 발급받은 접속정보로 로그인한다.
+- AWS Academy Lab - https://awsacademy.instructure.com/ 에 발급받은 접속정보로 로그인한다.
 - 대쉬보드 > 모듈 > Learner Lab - Associate Services 클릭한다.
 ![image](https://user-images.githubusercontent.com/35618409/187118228-d5a56653-ca93-440f-a855-18a72630c12e.png)
 - 아래와 같이 터미널이 출력된다.
