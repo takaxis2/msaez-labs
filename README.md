@@ -31,22 +31,19 @@
   - https://gitpod.io/#https://github.com/MY-GIT-ACCOUNT/msaez-labs
 
 
-### When Connecting
+### When Connecting (Every time)
 - Gitpod 인증화면이 나타나며 Gihub 계정정보를 입력한다.
 ![image](https://user-images.githubusercontent.com/35618409/187013335-cee187a1-cd43-4752-b881-424af1a9f2f9.png)
 - Gitpod 로고가 중앙에 나타나며 접속이 진행된다.
 - 성공적으로 접속이 이루어지면 VSCode 통합 IDE가 나타난다.
 ![image](https://user-images.githubusercontent.com/35618409/187012423-53229178-9221-492f-bf75-b493e99782be.png)
 - 왼쪽(Explorer) 영역에는 Github에 있는 Cloud Lab 리소스 목록이, 오른쪽에는 편집기와 터미널이 위치해 있다.
+- 터미널에서는 초기에 설정된 설치 스크립트가 실행되는데 이때 대문자 A를 눌러 기존설치를 Overwrite 한다.
+![image](https://user-images.githubusercontent.com/35618409/190939445-68358ce2-53cd-4565-af1d-25aa29c9ebcf.png)
 
 
-### After completing Gitpod Loading
-- 본 학기에 사용할 12st-mall 마이크로서비스는 Java언어인 Spring-boot를 사용한다.
-- VSCode에 Java 언어와 연관된 Extention Pack(Plugin)을 설치한다.  
-  - Ctrl + p를 눌러 File Search창을 띄운 다음, Order.java를 검색한다.
-  - 검색된 Java File을 클릭하면 이때 VSCode가 추천(오른쪽 하단에 작은 팝업)하는 'Java Extension Pack' Plugin을 Install한다.
-  - 조금 뒤, 편집기에 로딩된 Order.java 리소스에 설치한 확장팩이 적용된다. (일부 코드의 컬러가 바뀜)
-![image](https://user-images.githubusercontent.com/35618409/187050733-23d19286-74cb-4473-af7f-296a9902c251.png)
+
+## 여기까지만 진행하면 되고, 이하는 각 주차에서 필요시 진행할 내용임. 
 
 
 ## Built-in Utilities & How to add Tools 
