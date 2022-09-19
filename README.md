@@ -10,8 +10,9 @@
 
 
 ## Introduction to MSAEz
-![image](https://user-images.githubusercontent.com/35618409/187050405-cea49907-cb81-48a2-9533-30133793197a.png)
+![image](https://user-images.githubusercontent.com/35618409/190940132-b2223bc1-eec1-4821-bc2e-44908b54e9e3.png)
 
+- MSAEz 자세히 알아보기 (https://intro-kor.msaez.io/started/)
 
 ## Prerequisites for using Cloud Lab (Just once)
 - 본 클라우드서비스(Microservices) 학기동안 사용할 내 Local Machine 에
