@@ -1,12 +1,12 @@
 # SJCU Cloud Lab Tools
 
-- 본 학기 클라우드서비스의 활용 Lab은 MSAEz(https://labs.msaez.io)와 GitPod 환경에서 진행된다.
+- 본 학기 클라우드서비스의 활용 Lab은 온라인 이벤트스토밍 도구인 MSAEz(https://labs.msaez.io)와 온라인 개발환경인 GitPod에서 진행된다.
+> 내 로컬 머신에 설치해야 하는 소프트웨어는 전혀 없음
 
-- MSAEz는 마이크로서비스의 분석/설계 방법론인 EventStorming을 온라인 환경에서 완벽 제공해 주는 혁신적인 도구이다. 
+- MSAEz는 마이크로서비스의 최신 분석/설계 방법론인 EventStorming을 온라인 환경에서 완벽 제공해 주는 혁신적인 도구이다. 
 
-- GitPod란, Git기반 형상서버인 Github, 또는 Gitlab상에서 VSCode(Visual Studio Code) 통합 IDE 도구를 제공해 주는 무료  플랫폼이다.
-
-- GitPod는 Github 레포지토리 url앞에 gitpod.io/# 를 붙이면 손쉽게 Gitpod IDE로 들어갈 수 있다.
+- GitPod는 Git기반 형상서버인 Github, 또는 Gitlab상에서 VSCode(Visual Studio Code) 통합 IDE 도구를 제공해 주는 무료  플랫폼이다.
+> GitPod는 Github 레포지토리 url앞에 gitpod.io/# 를 붙이면 손쉽게 Gitpod IDE로 들어갈 수 있다.
 
 
 ## Introduction to MSAEz
