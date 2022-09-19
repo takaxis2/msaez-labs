@@ -27,7 +27,7 @@
 
 
 ## Entering the GitPod environment (Every time)
-- 클라우드서비스(Microservices) Github에 접속: https://github.com/MY-GIT-ACCOUNT/msaez-labs
+- 복사한 내 Github에 접속: https://github.com/MY-GIT-ACCOUNT/msaez-labs
   - Github 페이지가 로딩되고 나면, 도메인 URL 앞에 https://gitpod.io/# 을 추가 후, 새창에서 재접속해 본다.
   - https://gitpod.io/#https://github.com/MY-GIT-ACCOUNT/msaez-labs
 
@@ -36,11 +36,12 @@
 
 - Gitpod 인증화면이 나타나며 Gihub 계정정보를 입력한다.
 ![image](https://user-images.githubusercontent.com/35618409/187013335-cee187a1-cd43-4752-b881-424af1a9f2f9.png)
+
 - Gitpod 로고가 중앙에 나타나며 접속이 진행된다.
 - 성공적으로 접속이 이루어지면 VSCode 통합 IDE가 나타난다.
 ![image](https://user-images.githubusercontent.com/35618409/187012423-53229178-9221-492f-bf75-b493e99782be.png)
 - 왼쪽(Explorer) 영역에는 Github에 있는 Cloud Lab 리소스 목록이, 오른쪽에는 편집기와 터미널이 위치해 있다.
-- 
+
 - GitPod 로딩 후, 설정된 스크립트가 터미널에서 실행되는데 이때 대문자 'A'를 눌러 기존설치를 Overwrite 한다.
 ![image](https://user-images.githubusercontent.com/35618409/190939445-68358ce2-53cd-4565-af1d-25aa29c9ebcf.png)
 
