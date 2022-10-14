@@ -36,6 +36,7 @@ Text Editor(windows - 메모장)이 반드시 필요하며, 설명 중간중간 
 - 클러스터 이름을 영문으로 입력한다.
   - 예시: gdhong-eks
   - gdhong 대신에 반드시 '내이름영문명-eks' 형식의 정보로 수정한다. (Sample: lily-eks)
+  - 클러스터 이름을 Text Editor에 꼭 메모하자.
 - Kubernetes 버전과 Role을 디폴트설정으로 두고 '다음'을 클릭한다.
 ![image](https://user-images.githubusercontent.com/35618409/187119325-0578886e-d4ea-40b7-8b93-c0ae911b905c.png)
 
@@ -143,7 +144,7 @@ vi credentials
 #### kubernetes Cluster Connect & Testing
 
 - 설정된 aws 클라언트를 사용하여 Kubernetes Cluster와 클라이언트(kubectl)를 연결한다.
-- 아래 REGION_CODE와 MY-CLUSTER-NAME으로 수정하여 명령문을 실행한다.
+- 아래 REGION_CODE와 MY-CLUSTER-NAME을 Text Editor에 있는 내 정보로 수정하여 명령문을 실행한다.
 ```
 aws eks --region REGION_CODE update-kubeconfig --name MY-CLUSTER-NAME
 ```
