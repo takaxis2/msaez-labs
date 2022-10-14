@@ -95,10 +95,11 @@ kubectl apply -f service.yaml -n mall
 ```
 
 ### Deploy Delivery, Product Microservice 
-
 - 주문서비스와 동일한 방식으로 나머지 서비스를 배포한다.
 - 네임스페이스 mall은 추가적으로 생성하지 않아도 된다.
 
+### Deploy Gateway Microservice 
+- 모든 마이크로서비스들의 단일 진입점인 게이트웨이(Gateway Service)도 배포한다.
 
 ## Testing 12st-Mall 
 
