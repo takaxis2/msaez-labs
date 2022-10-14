@@ -33,7 +33,7 @@ Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버
 ### 클러스터 구성
 - 클러스터 이름을 영문으로 입력한다.
   - 예시: gdhong-eks
-  - gdhong 대신에 반드시 '내이름 영문명-eks' 형식의 정보로 수정한다. (Sample: lily-eks)
+  - gdhong 대신에 반드시 '내이름영문명-eks' 형식의 정보로 수정한다. (Sample: lily-eks)
 - Kubernetes 버전과 Role을 디폴트설정으로 두고 '다음'을 클릭한다.
 ![image](https://user-images.githubusercontent.com/35618409/187119325-0578886e-d4ea-40b7-8b93-c0ae911b905c.png)
 
@@ -46,7 +46,7 @@ Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버
 ![image](https://user-images.githubusercontent.com/35618409/187119829-afbd28a7-11e8-4faa-a246-30cb20d328d2.png)
 - 새로운 탭이 열리면서 보안그룹 생성화면이 나타난다.
 - 우측 빨간색 '보안그룹 생성' 버튼을 클릭한다.
-- 보안그룹 이름에 나만의 SecurityGroup명을 입력한다. (예시, 내이름 영문명-securitygroup)
+- 보안그룹 이름에 나만의 SecurityGroup명을 입력한다. (예시, 내이름영문명-securitygroup)
 - 필수정보인 '보안그룹 설명' 필드에도 동일하게 보안그룹 이름을 입력한다.
 - 인바운드 규칙에서 '규칙 추가'를 클릭한다.
 - 유형에서 '모든 트래픽', 소스 유형은 'Anywhere-IPv4'를 선택한다.
@@ -76,7 +76,7 @@ Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버
 ![image](https://user-images.githubusercontent.com/35618409/187133568-9e46bc9f-4357-45e0-b8a4-d5dda8cdf3e1.png)
 
 ### 노드 그룹 구성
-- 이름에 노드 그룹명(ex. lily-eks-NodeGroup)을 입력한다.
+- 이름에 노드 그룹명(ex. 내이름영문명-NodeGroup)을 입력한다.
 - 노드 IAM 역할은 LabRole을 선택한다.
 
 ### Kubernetes 레이블
