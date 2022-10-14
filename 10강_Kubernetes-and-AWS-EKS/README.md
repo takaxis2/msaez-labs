@@ -25,7 +25,7 @@ Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버
 - 이 입력란에 'Kubernetes'를 입력하고 검색된 첫번째  'Elastic Kubernetes Service'를 선택한다.
 - 아래와 같이 쿠버네티스 서비스를 생성할 수 있는 화면이 출력된다.
 ![image](https://user-images.githubusercontent.com/35618409/187118637-0a60e652-cffa-44f3-a8ff-cb2a931e6bb0.png)
-- '클러스터 추가' > '생성'를 클릭하여 쿠버네티스 생성을 차례로 .
+- '클러스터 추가' > '생성'를 클릭하여 쿠버네티스 생성을 이어지는 순서대로 진행한다.
 
 
 ## Creating Kubernetes Cluster 
