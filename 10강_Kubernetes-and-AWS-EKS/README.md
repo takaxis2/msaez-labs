@@ -1,6 +1,7 @@
 # Kubernetes(EKS) Provisioning on AWS
 
-Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버네티스 클라이언트와 연동하는 내용이다. 
+Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버네티스 클라이언트와 연동하는 내용이다.  
+Text Editor(windows - 메모장)이 반드시 필요하며, 설명 중간중간 Text Editor에 메모 요구가 나오면 이후 사용을 위해 반드시 메모하면서 진행한다.
 
 - 사전 환경
   > AWS Learner Lab 로그인 필수 (아래 참조)
@@ -21,6 +22,7 @@ Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버
 - 새로운 탭이 열리면서 아마존 관리콘솔(AWS Console) Main 페이지가 출력된다.
 ![image](https://user-images.githubusercontent.com/35618409/187118466-12b742e2-7323-494a-8572-df2c22aa53b9.png)
   - 접속지역은 미국동부(버지니아 북부, us-east-1)이다. 화면 우측상단에서 확인가능
+  - 이 us-east-1 가 리전 코드라고 부르며, 반드시 Text Editor에 복사해 두자.!!! 리전코드!!
 - Main 페이지 상단에 보면, 서비스 검색을 위한 입력 필드가 있다.
 - 이 입력란에 'Kubernetes'를 입력하고 검색된 첫번째  'Elastic Kubernetes Service'를 선택한다.
 - 아래와 같이 쿠버네티스 서비스를 생성할 수 있는 화면이 출력된다.
