@@ -61,6 +61,9 @@ docker build -t Docker-ID/order:v1 .
 docker push Docker-ID/order:v1
 ```
 - docker denied 오류가 발생하면 “docker login” 명령으로 Token을 생성하여 docker에 Credential을 주입하고 다시 Push한다.
+```
+docker login
+```
 
 - kubernetes 하위 폴더로 이동하여 deployment.yml 파일의 배포 Spec. 중 19라인을 내 이미지 정보로 수정하고 저장한다.
 ```
@@ -97,9 +100,21 @@ kubectl apply -f service.yaml -n mall
 ### Deploy Delivery, Product Microservice 
 - 주문서비스와 동일한 방식으로 나머지 서비스를 배포한다.
 - 네임스페이스 mall은 추가적으로 생성하지 않아도 된다.
+```
+cd oooooo
+mvn package -B -DskipTests
+docker build -t Docker-ID/????:v1 .
+docker push Docker-ID/????:v1
+```
 
 ### Deploy Gateway Microservice 
 - 모든 마이크로서비스들의 단일 진입점인 게이트웨이(Gateway Service)도 배포한다.
+```
+cd oooooo
+mvn package -B -DskipTests
+docker build -t Docker-ID/gateway:v1 .
+docker push Docker-ID/gateway:v1
+```
 
 ## Testing 12st-Mall 
 
