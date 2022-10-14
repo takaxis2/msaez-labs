@@ -106,7 +106,7 @@ Text Editor(windows - 메모장)이 반드시 필요하며, 설명 중간중간 
 - 내 클러스터를 클릭해 'Compute(컴퓨팅)' 탭을 눌러 생성된 워크노드을 확인한다. 
 
 
-## Configure Kubernetes Access from Gitpod  
+## Configure Kubernetes Client for Accessing from Gitpod  
 
 생성된 AWS Kubernetes Cluster를 위한 Client 환경은 GitPod 상에서 연결 설정하여 사용한다.
 (Learner Lab에서도 가능하지만, UI가 상대적으로 편리한 GitPod를 활용)
@@ -120,13 +120,15 @@ Text Editor(windows - 메모장)이 반드시 필요하며, 설명 중간중간 
 ![image](https://user-images.githubusercontent.com/35618409/187328088-7295b12a-c1de-498f-a3d0-2a2c312f8b9e.png)
 
 - 나의 Cloud Lab Gitpod 환경에 접속한다. (https://gitpod.io/#https://github.com/MY-GIT-ACCOUNT/msaez-labs)
-- 아래 Command를 실행한다.
+- GitPod에 접속하면 터미널상에 스크립트가 자동 실행되면서 로딩이 완료된다.
+- (혹시 Prompt가 물어보면 'A'를 입력하자..) 
+- 터미널 로딩이 완료된 후, 쿠버네티스 클라이언트 설정을 위해 아래 Command를 입력한다.
 - 나타나는 각 항목의 Value에 Text Editor에 있는, 또는 Learner Lab에서 조회된 정보를 입력한다.
 ```
 aws configure
 AWS Access Key ID [None]: Text Editor에 있는 aws_access_key_id의 Value 
 AWS Secret Access Key [None]: Text Editor에 있는 aws_secret_access_key의 Value 
-Default region name [None]: Learner Lab에서 Region 코드
+Default region name [None]: AWS Region 코드, Text Editor에 메모해 둔 코드
 Default output format [None]: json
 ```
 
