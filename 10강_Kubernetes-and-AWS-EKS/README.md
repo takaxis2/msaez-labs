@@ -115,9 +115,9 @@ Text Editor(windows - 메모장)이 반드시 필요하며, 설명 중간중간 
 
 ### Copy AWS Credentials to GitPod
 - Learner Lab에서 AWS Credential을 복사하여 GitPod에 붙여넣는다.
-- Learner Lab 메뉴 중, AWS Details를 클릭하고, 출력된 내용에서 AWS CLI 'Show'를 클릭한다.
-- Region 코드가 us-east-1 로 조회된다. (다른 Value일 수도 있음)
-- AWS CLI 네모영역 안에 보여지는 모든 정보를 복사하여 Text Editor에 붙여넣기 해 둔다. 
+  - Learner Lab 메뉴 중, AWS Details를 클릭하고, 출력된 내용에서 AWS CLI 'Show'를 클릭한다.
+  - Region 코드가 us-east-1 로 조회된다. (다른 Value일 수도 있음)
+  - AWS CLI 네모영역 안에 보여지는 모든 정보를 복사하여 Text Editor에 붙여넣기 해 둔다. 
 ![image](https://user-images.githubusercontent.com/35618409/187328088-7295b12a-c1de-498f-a3d0-2a2c312f8b9e.png)
 
 - 나의 Cloud Lab Gitpod 환경에 접속한다. (https://gitpod.io/#https://github.com/MY-GIT-ACCOUNT/msaez-labs)
