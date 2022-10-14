@@ -15,10 +15,14 @@ Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버
 - 아래와 같이 터미널이 출력된다.
 ![image](https://user-images.githubusercontent.com/35618409/187118347-117ab92b-450d-4e6b-a3da-c5f4d5e90e91.png)
 - 터미널 상단의 "▶Start Lab"을 클릭하여 터미널을 활성화한다.
-- 터미널 상단의 "AWS" 링크를 클릭하여 AWS Console에 접속한다.
+- 'V' 형의 큰 이미지에 Spinner가 돌아가면서 Lab이 활성화된다.
+
+- Lab이 활성화되고 나면 터미널 상단의 "<u>AWS</u>" 링크를 클릭한다.
+- 새로운 탭이 열리면서 아마존 관리콘솔(AWS Console) Main 페이지가 출력된다.
 ![image](https://user-images.githubusercontent.com/35618409/187118466-12b742e2-7323-494a-8572-df2c22aa53b9.png)
   - 접속지역은 미국동부(버지니아 북부, us-east-1)이다. 화면 우측상단에서 확인가능
-- 화면 중앙의 서비스 검색란에 Kubernetes를 입력하고 검색된 Elastic Kubernetes Service를 선택한다.
+- Main 페이지 상단에 보면, 서비스 검색을 위한 입력 필드가 있다.
+- 이 입력란에 'Kubernetes'를 입력하고 검색된 첫번째  'Elastic Kubernetes Service'를 선택한다.
 ![image](https://user-images.githubusercontent.com/35618409/187118637-0a60e652-cffa-44f3-a8ff-cb2a931e6bb0.png)
 - '클러스터 추가' > '생성'를 클릭한다.
 
@@ -28,25 +32,27 @@ Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버
 ### 클러스터 구성
 - 클러스터 이름을 영문으로 입력한다.
   - 예시: gdhong-eks
-  - gdhong 대신에 나의 정보로 수정한다. (Sample: lily-eks)
+  - gdhong 대신에 반드시 '내이름 영문명-eks' 형식의 정보로 수정한다. (Sample: lily-eks)
 - Kubernetes 버전과 Role을 디폴트설정으로 두고 '다음'을 클릭한다.
 ![image](https://user-images.githubusercontent.com/35618409/187119325-0578886e-d4ea-40b7-8b93-c0ae911b905c.png)
 
 ### 네트워킹 지정
 - VPC를 기본값으로 둔다. 
-- 서브넷 구성에서 목록을 열어 us-east-1a, us-east-1b, us-east-1c만 선택되도록 한다.
+- 서브넷 구성에서 목록을 열어 현재, 6개가 선택된 상태에서 us-east-1a, us-east-1b, us-east-1c만 선택되도록 d,e,f를 선택해제한다.
 ![image](https://user-images.githubusercontent.com/35618409/187119661-d464d3f7-4072-44e4-a61b-d5802ae6efa9.png)
 
-- 보안그룹 설명에서 새보안 그룹을 생성(Ctrl + 'VPC콘솔' 클릭) 한다.
+- 2줄로 적힌 보안그룹 설명문을 자세히 살펴보면, 새보안그룹 생성에 링크가 걸려 있는데 컨트롤 키(Ctrl)를 누른 상태에서 'VPC콘솔' 링크를 클릭한다.
 ![image](https://user-images.githubusercontent.com/35618409/187119829-afbd28a7-11e8-4faa-a246-30cb20d328d2.png)
-- 오픈된 창에서 '보안그룹 생성'을 클릭한다.
-- 보안그룹 이름에 나만의 SecurityGroup명을 입력한다. (예시, gdhong-securitygroup)
+- 새로운 탭이 열리면서 보안그룹 생성화면이 나타난다.
+- 우측 빨간색 '보안그룹 생성' 버튼을 클릭한다.
+- 보안그룹 이름에 나만의 SecurityGroup명을 입력한다. (예시, 내이름 영문명-securitygroup)
 - 필수정보인 '보안그룹 설명' 필드에도 동일하게 보안그룹 이름을 입력한다.
 - 인바운드 규칙에서 '규칙 추가'를 클릭한다.
 - 유형에서 '모든 트래픽', 소스 유형은 'Anywhere-IPv4'를 선택한다.
-- 보안그룹 생성을 클릭해 정상적으로 생성되면 창을 닫는다.
+- 우측 아래쪽에 있는 '보안그룹 생성' 버튼을 클릭해 정상적으로 생성되면 창을 닫는다.
 ![image](https://user-images.githubusercontent.com/35618409/187125888-f2a627a9-90b3-4306-8421-414e04612c13.png)
 
+- 진행중이던 Cluster 생성 창에서 계속 진행한다.
 - 보안그룹 선택 필드 우측의 Reload를 눌러 방금 생성한 보안그룹을 지정한다.
 ![image](https://user-images.githubusercontent.com/35618409/187126059-9db5a09a-fe34-44af-a6c5-f2da83dc0112.png)
 - 나머지 설정을 Default로 두고 '다음'을 클릭한다.
