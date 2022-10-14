@@ -107,7 +107,7 @@ Academy Learner Lab을 통해 아마존 AWS에 Kubernetes를 설치하고 쿠버
 ## Configure Kubernetes Access from Gitpod  
 
 생성된 AWS Kubernetes Cluster를 위한 Client 환경은 GitPod 상에서 연결 설정하여 사용한다.
-(Learnet Lab에서도 가능하지만, UI가 상대적으로 편리한 GitPod를 활용)
+(Learner Lab에서도 가능하지만, UI가 상대적으로 편리한 GitPod를 활용)
 
 
 ### Copy AWS Credentials to GitPod
