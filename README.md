@@ -123,7 +123,7 @@ bin/kafka-server-start.sh config/server.properties &
 
 - Kafka Event 컨슈밍하기 (별도 터미널)
 ```
-cd kafka_2.13-3.1.0/
+cd kafka_2.13-3.0.0
 bin/kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic mall
 ```
 
