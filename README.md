@@ -110,13 +110,13 @@ docker-compose exec -it kafka /bin/bash   # kafka docker container 내부 shell 
 ### 로컬 설치 (Docker Runtime이 설치되어 있지 않을 때, 비추)
 - Kafka Download
 ```
-wget https://dlcdn.apache.org/kafka/3.1.0/kafka_2.13-3.1.0.tgz
-tar -xf kafka_2.13-3.1.0.tgz
+wget https://archive.apache.org/dist/kafka/3.0.0/kafka_2.13-3.0.0.tgz
+tar -xvf kafka_2.13-3.0.0.tgz
 ```
 
 - Run Kafka
 ```
-cd kafka_2.13-3.1.0/
+cd kafka_2.13-3.0.0
 bin/zookeeper-server-start.sh config/zookeeper.properties &
 bin/kafka-server-start.sh config/server.properties &
 ```
