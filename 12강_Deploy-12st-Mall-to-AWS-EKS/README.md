@@ -38,12 +38,56 @@ kubectl get all
 - Unable to connect to the server: dial tcp: ~~~~ 어쩌구, 라고 나오면 연결이 필요하다.
 - 연결하는 방법은 10강_Kubernetes-and-AWS-EKS의 README.md 중 "Configure Kubernetes Access from Gitpod"을 참조한다.
 
-### Install Kafka with Helm
+### Create Namespace
 ```
-helm repo add bitnami https://charts.bitnami.com/bitnami
-helm repo update
-kubectl create ns kafka
-helm install my-kafka bitnami/kafka --namespace kafka
+kubectl create namespace kafka
+```
+
+### Install Kafka with Deployment YAML
+- 아래 Kafka 배포를 위한 전 YAML을 복사하여 터미널에서 실행한다.
+```
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-kafka
+  namespace: kafka
+spec:
+  selector:
+    app: kafka
+  ports:
+    - name: kafka
+      protocol: TCP
+      port: 9092
+      targetPort: 9092
+  type: ClusterIP
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-kafka
+  labels:
+    app: kafka
+  namespace: kafka  
+spec:
+  containers:
+    - name: my-kafka
+      image: bitnami/kafka:latest
+      ports:
+        - containerPort: 9092
+      env:  
+        - name: ALLOW_PLAINTEXT_LISTENER
+          value: "yes"   
+        - name: KAFKA_KRAFT_CLUSTER_ID
+          value: kafka_cluster_id_test1                  
+      volumeMounts:
+        - name: data
+          mountPath: /kafka/data
+  volumes:
+    - name: data
+      hostPath:
+        path: /tmp
+EOF
 ```
 
 - 잠시뒤, 아래 Command로 Kubernetes에 설치된 Kafka Stack을 확인할 수 있다.
