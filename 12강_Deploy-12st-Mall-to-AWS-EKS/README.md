@@ -77,14 +77,12 @@ spec:
 
 - 12st-Mall 을 위한 네임스페이스를 생성하고 주문서비스를 배포한다.
 ```
-kubectl create namespace mall
-kubectl apply -f deployment.yml -n mall
-kubectl apply -f service.yaml -n mall
+kubectl apply -f deployment.yml -n kafka
+kubectl apply -f service.yaml -n kafka
 ```
 
 ### Deploy Delivery, Product Microservice 
-- 주문서비스와 동일한 방식으로 나머지 서비스를 배포한다.
-- 네임스페이스 mall은 추가적으로 생성하지 않아도 된다.
+- 주문서비스와 동일한 방식으로 나머지 서비스를 Kafka 네임스페이스 상에 배포한다.
 ```
 cd oooooo
 mvn package -B -DskipTests
@@ -109,7 +107,7 @@ docker push Docker-ID/gateway:v1
 ### Acquire Gateway Endpoint
 - Kubectl 커맨드로 게이트웨이 서비스의 EXTERNAL-IP를 복사한다. (서비스포트는 8080 임)
 ```
-kubectl get service -n mall
+kubectl get service -n kafka
 ```
 
 ### Request REST Calls (Order, Cancel Order)
