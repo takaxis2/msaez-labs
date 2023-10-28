@@ -39,7 +39,7 @@ Text Editor(windows - 메모장)이 반드시 필요하며, 설명 중간중간 
   - 클러스터 이름을 Text Editor에 꼭 메모하자.
 - Kubernetes 버전을 1.27로 선택하자. (반드시)
 - Kubernetes 버전과 Role을 디폴트설정으로 두고 '다음'을 클릭한다.
-![image](https://user-images.githubusercontent.com/35618409/187119325-0578886e-d4ea-40b7-8b93-c0ae911b905c.png)
+![image](https://github.com/acmexii/demo/assets/35618409/c4629bb6-eba2-4eb3-8a73-a9b2b676e05e)
 - 선택된 Kubernetes 버전을 다시 한번 확인한다. (1.23 미만으로 선택되었는지.)
 
 ### 네트워킹 지정
