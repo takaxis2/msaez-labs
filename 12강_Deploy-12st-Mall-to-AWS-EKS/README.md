@@ -23,6 +23,7 @@ kubectl create namespace kafka
 
 ### Install Kafka with Deployment YAML
 - 아래 Kafka 배포를 위한 전 YAML을 복사하여 터미널에서 실행한다.
+- 전체 복사 후, GitPod 터미널에 붙여 넣은 후, 엔터키를 눌러 카프카를 내 클러스터에 설치한다.
 ```
 kubectl apply -f - <<EOF
 apiVersion: v1
@@ -50,7 +51,7 @@ metadata:
 spec:
   containers:
     - name: my-kafka
-      image: bitnami/kafka:latest
+      image: bitnami/kafka:3.5
       ports:
         - containerPort: 9092
       env:  
