@@ -65,7 +65,6 @@ Text Editor(windows - 메모장)이 반드시 필요하며, 설명 중간중간 
 
 ### 로깅 구성
 - 모두 비활성화 상태에서 '다음'을 클릭한다.
-![image](https://user-images.githubusercontent.com정 상태에서 '다음'을 클릭한다.
 
 ### 추가 기능 선택, 선택한 추가 기능 설정 구성
 - 기본 설정된 상태에서 '다음'을 클릭한다.
