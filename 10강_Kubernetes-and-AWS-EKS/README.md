@@ -37,7 +37,7 @@ Text Editor(windows - 메모장)이 반드시 필요하며, 설명 중간중간 
   - 예시: gdhong-eks
   - gdhong 대신에 반드시 '내이름영문명-eks' 형식의 정보로 수정한다. (Sample: lily-eks)
   - 클러스터 이름을 Text Editor에 꼭 메모하자.
-- Kubernetes 버전을 1.21, 또는 1.22로 선택하자. (반드시)
+- Kubernetes 버전을 1.27로 선택하자. (반드시)
 - Kubernetes 버전과 Role을 디폴트설정으로 두고 '다음'을 클릭한다.
 ![image](https://user-images.githubusercontent.com/35618409/187119325-0578886e-d4ea-40b7-8b93-c0ae911b905c.png)
 - 선택된 Kubernetes 버전을 다시 한번 확인한다. (1.23 미만으로 선택되었는지.)
