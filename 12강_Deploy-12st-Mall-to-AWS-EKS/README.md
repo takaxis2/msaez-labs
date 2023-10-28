@@ -81,6 +81,8 @@ kubectl apply -f deployment.yml -n kafka
 kubectl apply -f service.yaml -n kafka
 ```
 
+### 아래의 모든 서비스도 mall이 아닌, 주문처럼 kafka 네임스페이스에 배포합니다.
+
 ### Deploy Delivery, Product Microservice 
 - 주문서비스와 동일한 방식으로 나머지 서비스를 Kafka 네임스페이스 상에 배포한다.
 ```
