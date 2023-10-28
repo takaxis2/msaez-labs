@@ -80,8 +80,8 @@ Text Editor(windows - 메모장)이 반드시 필요하며, 설명 중간중간 
 
 ### Adding WorkNode Group to my Cluster
 - 내 클러스터를 클릭해 'Compute(컴퓨팅)' 탭에서 노드그룹을 추가한다.
-- 'Compute(컴퓨팅)' 탭의 '노드그룹추가' 를 클릭한다.
-![image](https://user-images.githubusercontent.com/35618409/187133568-9e46bc9f-4357-45e0-b8a4-d5dda8cdf3e1.png)
+- 'Compute(컴퓨팅)' 탭의 '노드 그룹 추가' 를 클릭한다.
+![image](https://github.com/acmexii/demo/assets/35618409/41233589-9542-4b18-ab41-c29a342c2684)
 
 ### 노드 그룹 구성
 - 이름에 노드 그룹명(ex. 내이름영문명-NodeGroup)을 입력한다.
