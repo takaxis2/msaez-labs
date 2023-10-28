@@ -22,51 +22,13 @@ kubectl create namespace kafka
 ```
 
 ### Install Kafka with Deployment YAML
-- 아래 Kafka 배포를 위한 전 YAML을 복사하여 터미널에서 실행한다.
-- 전체 복사 후, GitPod 터미널에 붙여 넣은 후, 엔터키를 눌러 카프카를 내 클러스터에 설치한다.
+- 아래 커맨드를 복사하여 Kafka 설치 전, Zookeeper를 먼저 설치한다.
 ```
-kubectl apply -f - <<EOF
-apiVersion: v1
-kind: Service
-metadata:
-  name: my-kafka
-  namespace: kafka
-spec:
-  selector:
-    app: kafka
-  ports:
-    - name: kafka
-      protocol: TCP
-      port: 9092
-      targetPort: 9092
-  type: ClusterIP
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: my-kafka
-  labels:
-    app: kafka
-  namespace: kafka  
-spec:
-  containers:
-    - name: my-kafka
-      image: bitnami/kafka:3.5
-      ports:
-        - containerPort: 9092
-      env:  
-        - name: ALLOW_PLAINTEXT_LISTENER
-          value: "yes"   
-        - name: KAFKA_KRAFT_CLUSTER_ID
-          value: kafka_cluster_id_test1                  
-      volumeMounts:
-        - name: data
-          mountPath: /kafka/data
-  volumes:
-    - name: data
-      hostPath:
-        path: /tmp
-EOF
+kubectl apply -f https://raw.githubusercontent.com/acmexii/demo/master/edu/zookeeper.yaml -n kafka
+```
+- 이어서, 아래 커맨드로 Kafka를 먼저 설치한다.
+```
+kubectl apply -f https://raw.githubusercontent.com/acmexii/demo/master/edu/zookeeper.yaml -n kafka
 ```
 
 - 잠시뒤, 아래 Command로 Kubernetes에 설치된 Kafka Stack을 확인할 수 있다.
