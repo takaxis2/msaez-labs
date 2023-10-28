@@ -26,9 +26,9 @@ kubectl create namespace kafka
 ```
 kubectl apply -f https://raw.githubusercontent.com/acmexii/demo/master/edu/zookeeper.yaml -n kafka
 ```
-- 이어서, 아래 커맨드로 Kafka를 먼저 설치한다.
+- 조금 뒤 아래 커맨드로 Kafka를 이어서 설치한다.
 ```
-kubectl apply -f https://raw.githubusercontent.com/acmexii/demo/master/edu/zookeeper.yaml -n kafka
+kubectl apply -f https://raw.githubusercontent.com/acmexii/demo/master/edu/kafka.yaml -n kafka
 ```
 
 - 잠시뒤, 아래 Command로 Kubernetes에 설치된 Kafka Stack을 확인할 수 있다.
