@@ -3,10 +3,11 @@ set -e
 
 # 기본 유틸 설치
 sudo apt-get update
-sudo apt-get install -y net-tools iputils-ping unzip
+sudo apt-get install -y net-tools iputils-ping unzip curl python3-pip pipx
+pipx ensurepath
 
 # httpie 설치
-pip3 install httpie
+pipx install httpie
 
 # kubectl 설치
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
