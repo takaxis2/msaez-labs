@@ -16,9 +16,11 @@ rm kubectl
 
 # awscli 설치
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
+unzip -o awscliv2.zip
+sudo ./aws/install --update
 rm -rf aws awscliv2.zip
+
+
 
 # eksctl 설치
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
