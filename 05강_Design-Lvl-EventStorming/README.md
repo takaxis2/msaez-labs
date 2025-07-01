@@ -11,7 +11,6 @@ MSAEz 이벤트스토밍 툴을 이용하여 DDD의 구체적설계에 해당하
 - 크롬브라우저로 https://labs.msaez.io/ 사이트에 접속하고 GIT 계정으로 로그인한다.
 - 아래 쇼핑몰 Process 모델 주소에 접속한다.
 - https://labs.msaez.io/#/35618409/storming/4e78411ffe9f2abd2faf073f9e026e30
-
 - 출력된 Process-Level 모델의 상단 'FORK' 메뉴를 눌러 내 저장소로 복제하고 이를 활용하자.
  ![image](https://user-images.githubusercontent.com/35618409/187016809-4c1eaf85-f9dd-4334-822c-e76da26e3723.png)
 
