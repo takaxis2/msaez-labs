@@ -13,7 +13,7 @@
 - (1) 우측 상단의 아바타 아이콘을 눌러 나타난 팝업 화면에서 (2) 'CONTINUE WITH GITHUB' 버튼을 눌러 내 Git계정으로 로그인한다.
 ![Image](https://github.com/user-attachments/assets/5b1c331e-512a-4b62-87b0-6301b0bdaa8e)
 
-- 화면 상단의 '만들기' 메뉴를 클릭한다.
+- 로그인 후, 화면 상단의 '만들기' 메뉴를 클릭한다.
 - 이벤트스토밍 메뉴 영역에서 '생성'을 클릭한다.
   
 - Eventstorming 을 위한 스티커 팔렛트와 캔버스 영역이 나타난다.
