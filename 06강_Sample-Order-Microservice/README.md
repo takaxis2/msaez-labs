@@ -10,6 +10,7 @@
 - MSAEz는 마이크로서비스의 분석/설계 방법론인 EventStorming을 온라인 환경에서 완벽 제공해 주는 혁신적인 도구이다. 
 - GitPod란, Git기반 형상서버인 Github, 또는 Gitlab상에서 VSCode(Visual Studio Code) 통합 IDE 도구를 제공해 주는 무료  플랫폼이다.
 - GitPod는 Github 레포지토리 url앞에 gitpod.io/# 를 붙이면 손쉽게 Gitpod IDE로 들어갈 수 있다.
+- 최초, GitPod를 통한 Git Repository 접속 시, 몇가지 절차가 있는데 기본 정보로 입력하고 설정하도록 한다. 
 
 ### Step #1.
 - Gihub 가입 : https://github.com 도메인에 회원가입(sign-up) 후, 반드시 입력한 메일주소에서 확인까지 수행
@@ -23,7 +24,7 @@
 
 ### Step #3.
 - 클라우드서비스(Microservices) Github에 접속: https://github.com/MY-GIT-ACCOUNT/msaez-labs
-  - Github 페이지가 로딩되고 나면, 도메인 URL 앞에 https://gitpod.io/# 을 추가 후, 새창에서 재접속해 본다.
+  - Github 페이지가 로딩되고 나면, 도메인 URL 앞에 https://gitpod.io/# 을 추가 후, 새 창에서 재접속해 본다.
   - https://gitpod.io/#https://github.com/MY-GIT-ACCOUNT/msaez-labs
 
 ### Step #4.
