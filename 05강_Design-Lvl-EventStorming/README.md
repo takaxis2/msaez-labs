@@ -8,9 +8,11 @@ MSAEz 이벤트스토밍 툴을 이용하여 DDD의 구체적설계에 해당하
 - 기본적인 테크니컬 설계요소까지 가미된 EventStorming 모델은 Implementation 단계시 Business Logic 등을 구체화하여 구현 완료된다.
 
 ## Process-Level EventStorming 모델이 없는 경우,
-- 크롬브라우저로 아래 사이트에 접속한다.
-- https://labs.msaez.io/#/storming/C7pO0ZuWtXXxIKenocD9EMPYrxw2/5e635760de5900b532e373f8d6db25b9 
-- 출력된 Process-Level 모델을 'FORK'하여 내 브라우저로 복제하고 이를 활용하자.
+- 크롬브라우저로 https://labs.msaez.io/ 사이트에 접속하고 GIT 계정으로 로그인한다.
+- 아래 쇼핑몰 Process 모델 주소에 접속한다.
+- https://labs.msaez.io/#/35618409/storming/4e78411ffe9f2abd2faf073f9e026e30
+
+- 출력된 Process-Level 모델의 상단 'FORK' 메뉴를 눌러 내 저장소로 복제하고 이를 활용하자.
  ![image](https://user-images.githubusercontent.com/35618409/187016809-4c1eaf85-f9dd-4334-822c-e76da26e3723.png)
 
 
