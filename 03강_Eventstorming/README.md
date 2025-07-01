@@ -3,7 +3,9 @@
 이벤트스토밍을 지원하는 온라인 기반의 혁신도구인 MSAEz를 활용하여 DDD기반 마이크로서비스의 최신 분석/설계 방법론을 익힌다.
 
 - Local Machine에 크롬 브라우저를 실행한다. (설치되어 있지 않으면 먼저 설치한다.)
-- 설치 URL : https://www.google.com/intl/ko_kr/chrome/
+  - 설치 URL : https://www.google.com/intl/ko_kr/chrome/
+- 사용자별 GitHub 레파지토리에 게정이 생성되어 있어야 한다.
+  - 깃헙(https://github.com/)에 가입(Sign up)한다.
 
 
 ## Connect to MSAEz Eventstoming 
