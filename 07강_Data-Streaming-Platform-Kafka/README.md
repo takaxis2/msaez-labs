@@ -5,6 +5,8 @@
 - 사전 환경
   > Gitpod based 랩환경 사전설정 필수
 [(Gitpod-based Lab Environments 참고링크)](https://github.com/acmexii/msaez-labs/tree/main/06%EA%B0%95_Sample-Order-Microservice#configure-web-based-rumtime-environments)
+  >
+  > 루트 경로에서 ./init.sh 명령어로 필요한 패키지 다운로드
 
 ## Preparation for Kafka Lab
 - Docker Compose로 Kafka 서버를 실행한다.
